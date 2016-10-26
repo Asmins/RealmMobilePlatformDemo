@@ -9,6 +9,6 @@
 import UIKit
 
 protocol MainInteractorProtocol {
-    func addNewTask(viewController:UIViewController)
+    func addNewTask(text:String)
     func synchronizeData(userName:String,password:String,tableView:UITableView)
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MainPresenterProtocol {
-    func addItem(viewController:UIViewController)
+    func addItem(text:String)
     func numberOfItem() -> Int
     func setupCell(cell:UITableViewCell,indexPath:NSIndexPath)
     func syncData(userName:String,password:String,tableView:UITableView)

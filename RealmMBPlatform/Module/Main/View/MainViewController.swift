@@ -1,4 +1,4 @@
-//
+
 //  MainViewController.swift
 //  RealmMBPlatform
 //
@@ -10,6 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet var textField: UITextField!
     @IBOutlet var tableView: UITableView!
     var presenter:MainPresenter?
     var userName:String?
@@ -17,13 +18,13 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: Selector("add"))
         self.presenter?.syncData(userName: userName!, password: password!, tableView: tableView)
         title = "My task"
     }
     
-    func add() {
-        self.presenter?.addItem(viewController: self)
+    @IBAction func sendMessageButton(_ sender: AnyObject) {
+        self.presenter?.addItem(text: textField.text!)
+        textField.text = ""
     }
 }
 extension MainViewController: UITableViewDataSource {

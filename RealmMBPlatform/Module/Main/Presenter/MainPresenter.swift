@@ -14,8 +14,8 @@ class MainPresenter {
 
 extension MainPresenter: MainPresenterProtocol {
     
-    func addItem(viewController: UIViewController) {
-        self.interactor?.addNewTask(viewController: viewController)
+    func addItem(text: String) {
+        self.interactor?.addNewTask(text: text)
     }
     
     func syncData(userName: String, password: String, tableView: UITableView) {
@@ -23,10 +23,10 @@ extension MainPresenter: MainPresenterProtocol {
     }
     
     func setupCell(cell:UITableViewCell,indexPath:NSIndexPath) {
-        cell.textLabel?.text = self.interactor?.items[indexPath.row].text
+        cell.textLabel?.text = self.interactor?.message[indexPath.row].textMessage
     }
     
     func numberOfItem() -> Int {
-        return (self.interactor?.items.count)!
+        return (self.interactor?.message.count)!
     }
 }
