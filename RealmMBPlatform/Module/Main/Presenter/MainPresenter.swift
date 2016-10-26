@@ -24,6 +24,7 @@ extension MainPresenter: MainPresenterProtocol {
     
     func setupCell(cell:UITableViewCell,indexPath:NSIndexPath) {
         cell.textLabel?.text = self.interactor?.message[indexPath.row].textMessage
+        cell.detailTextLabel?.text = self.interactor?.message[indexPath.row].user
     }
     
     func numberOfItem() -> Int {

@@ -39,11 +39,19 @@
                                     <action selector="loginButton:" destination="1uJ-kP-JkS" eventType="touchUpInside" id="h6Z-5g-vnH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bE-lw-wyG">
+                                <state key="normal" title="Registration"/>
+                                <connections>
+                                    <action selector="registerButton:" destination="1uJ-kP-JkS" eventType="touchUpInside" id="Eum-EJ-imD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="cOi-h4-gW8" secondAttribute="trailing" constant="20" id="8zW-eC-pFz"/>
                             <constraint firstItem="kvk-6T-Y5W" firstAttribute="top" secondItem="YJU-gq-pg2" secondAttribute="bottom" constant="160" id="DyO-xh-7xe"/>
+                            <constraint firstItem="9bE-lw-wyG" firstAttribute="leading" secondItem="sWB-FA-DM0" secondAttribute="leading" constant="20" id="S6b-TM-Wa9"/>
+                            <constraint firstAttribute="trailing" secondItem="9bE-lw-wyG" secondAttribute="trailing" constant="20" id="WbB-9J-plt"/>
                             <constraint firstItem="YJU-gq-pg2" firstAttribute="leading" secondItem="sWB-FA-DM0" secondAttribute="leading" constant="20" id="YCD-Bq-w7O"/>
                             <constraint firstAttribute="trailing" secondItem="YJU-gq-pg2" secondAttribute="trailing" constant="20" id="Z7w-5G-8Zp"/>
                             <constraint firstItem="JYz-x6-uHg" firstAttribute="leading" secondItem="sWB-FA-DM0" secondAttribute="leading" constant="20" id="ajF-k5-kaS"/>
@@ -52,6 +60,7 @@
                             <constraint firstItem="cOi-h4-gW8" firstAttribute="top" secondItem="kvk-6T-Y5W" secondAttribute="bottom" constant="45" id="cBM-fD-OSL"/>
                             <constraint firstItem="YJU-gq-pg2" firstAttribute="top" secondItem="YIy-GK-v9Q" secondAttribute="bottom" constant="40" id="fHQ-ed-saK"/>
                             <constraint firstAttribute="trailing" secondItem="kvk-6T-Y5W" secondAttribute="trailing" constant="20" id="fcU-uF-omV"/>
+                            <constraint firstItem="9bE-lw-wyG" firstAttribute="top" secondItem="JYz-x6-uHg" secondAttribute="bottom" constant="10" id="jZi-PT-aOJ"/>
                             <constraint firstAttribute="trailing" secondItem="JYz-x6-uHg" secondAttribute="trailing" constant="20" id="kfN-Ca-0we"/>
                             <constraint firstItem="kvk-6T-Y5W" firstAttribute="leading" secondItem="sWB-FA-DM0" secondAttribute="leading" constant="20" id="vPS-OW-jTn"/>
                         </constraints>

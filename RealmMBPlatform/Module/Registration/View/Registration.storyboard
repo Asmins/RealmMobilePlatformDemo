@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2327e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Registration View Controller-->
+        <scene sceneID="blE-x6-eMn">
+            <objects>
+                <viewController storyboardIdentifier="RegistrationViewController" id="5ZR-KW-luX" customClass="RegistrationViewController" customModule="RealmMBPlatform" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eHv-Ft-PIo"/>
+                        <viewControllerLayoutGuide type="bottom" id="hW4-d0-Eui"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HDR-sB-FUH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTA-vM-G5t">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ckp-1m-uMO">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S2q-d8-ndb">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTd-YM-K7j">
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButton:" destination="5ZR-KW-luX" eventType="touchUpInside" id="Y3s-gj-ygK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZTd-YM-K7j" firstAttribute="leading" secondItem="HDR-sB-FUH" secondAttribute="leading" constant="20" id="1ag-6G-8cy"/>
+                            <constraint firstItem="ckp-1m-uMO" firstAttribute="top" secondItem="S2q-d8-ndb" secondAttribute="bottom" constant="15" id="25A-Ij-6pY"/>
+                            <constraint firstAttribute="trailing" secondItem="S2q-d8-ndb" secondAttribute="trailing" constant="20" id="2hc-kS-pBz"/>
+                            <constraint firstAttribute="trailing" secondItem="LTA-vM-G5t" secondAttribute="trailing" constant="20" id="7bv-E0-Rri"/>
+                            <constraint firstItem="LTA-vM-G5t" firstAttribute="leading" secondItem="HDR-sB-FUH" secondAttribute="leading" constant="20" id="GZE-2i-GDm"/>
+                            <constraint firstItem="ZTd-YM-K7j" firstAttribute="top" secondItem="ckp-1m-uMO" secondAttribute="bottom" constant="20" id="P1i-MW-ihg"/>
+                            <constraint firstItem="S2q-d8-ndb" firstAttribute="leading" secondItem="HDR-sB-FUH" secondAttribute="leading" constant="20" id="WqY-tS-JXc"/>
+                            <constraint firstItem="LTA-vM-G5t" firstAttribute="top" secondItem="eHv-Ft-PIo" secondAttribute="bottom" constant="60" id="dUL-cw-eOe"/>
+                            <constraint firstAttribute="trailing" secondItem="ZTd-YM-K7j" secondAttribute="trailing" constant="20" id="h6G-An-inR"/>
+                            <constraint firstItem="ckp-1m-uMO" firstAttribute="centerY" secondItem="HDR-sB-FUH" secondAttribute="centerY" id="pTN-6s-17e"/>
+                            <constraint firstItem="ckp-1m-uMO" firstAttribute="leading" secondItem="HDR-sB-FUH" secondAttribute="leading" constant="20" id="qLC-di-skn"/>
+                            <constraint firstAttribute="trailing" secondItem="ckp-1m-uMO" secondAttribute="trailing" constant="20" id="tCR-7C-Lgw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textFieldName" destination="S2q-d8-ndb" id="pdf-N8-Y2y"/>
+                        <outlet property="textFieldPassword" destination="ckp-1m-uMO" id="dch-nq-umI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h12-Wu-N3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="83" y="80"/>
+        </scene>
+    </scenes>
+</document>

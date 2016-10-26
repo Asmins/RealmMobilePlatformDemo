@@ -11,4 +11,5 @@ import RealmSwift
 
 class Message: Object {
     dynamic var textMessage = ""
+    dynamic var user = ""
 }

@@ -32,4 +32,11 @@ extension LoginWireframe: LoginWireframeProtocol {
         mainViewController.presenter?.interactor = MainInteractor()
         loginViewController?.navigationController?.pushViewController(mainViewController, animated: true)
     }
+    
+    func showRegistrView() {
+        let registerView = UIStoryboard(name: "Registration", bundle: nil).instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
+        registerView.presenter = RegistrationPresenter()
+        registerView.presenter?.interactor = RegistrationInteractor()
+        loginViewController?.navigationController?.pushViewController(registerView, animated: true)
+    }
 }

@@ -26,5 +26,13 @@ class LoginViewController: UIViewController {
             self.navigation?.showMainView(userName: textFieldForEmail.text!, password: textFieldForPassword.text!)
         })
     }
+    @IBAction func registerButton(_ sender: AnyObject) {
+        self.navigation?.showRegistrView()
+    }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        textFieldForEmail.text = ""
+        textFieldForPassword.text = ""
+    }
 }

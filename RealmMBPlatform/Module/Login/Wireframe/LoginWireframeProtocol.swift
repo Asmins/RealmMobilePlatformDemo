@@ -9,6 +9,7 @@
 import Foundation
 
 protocol LoginWireframeProtocol {
+    func showRegistrView()
     func showLoginView()
     func showMainView(userName:String,password:String)
 }

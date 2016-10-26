@@ -10,6 +10,7 @@ import Foundation
 import RealmSwift
 
 class MainInteractor {
+    var username:String!
     var message = [Message]()
     var realm:Realm!
     var notificationToken: NotificationToken!
@@ -18,16 +19,16 @@ class MainInteractor {
 extension MainInteractor: MainInteractorProtocol {
     
     func addNewTask(text:String) {
-        if text != "" {
-            try! realm.write {
-                realm.add(Message(value: ["textMessage":text]))
-            }
+        try! realm.write {
+            realm.add(Message(value: [text,username!]))
         }
     }
     
     func synchronizeData(userName: String, password: String,tableView:UITableView) {
         let url = URL(string: "http://127.0.0.1:9080")
         print(Realm.Configuration.defaultConfiguration.fileURL)
+        
+        username = userName
         SyncUser.authenticate(with: Credential.usernamePassword(username: userName, password: password, actions: []), server: url!, onCompletion: { user,error in
             let user = user
             
@@ -36,7 +37,7 @@ extension MainInteractor: MainInteractorProtocol {
             }
             
             let configuration = Realm.Configuration(
-                syncConfiguration: (user!, URL(string: "realm://127.0.0.1:9080/allMessage/messages")!)
+                syncConfiguration: (user!, URL(string: "realm://127.0.0.1:9080/all/messages")!)
             )
             
             self.realm = try! Realm(configuration: configuration)
