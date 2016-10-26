@@ -10,12 +10,21 @@ import UIKit
 
 class MainPresenter {
     var interactor:MainInteractor?
+    
+    func some(textField:UITextField){
+        self.interactor?.some(textField: textField)
+        
+    }
 }
 
 extension MainPresenter: MainPresenterProtocol {
 
-    func addItem(text: String) {
+    func addItem(text:String) {
         self.interactor?.addNewTask(text: text)
+    }
+
+    func clean(textField: UITextField) {
+        self.interactor?.clean(textField: textField)
     }
     
     func syncData(userName: String, password: String, tableView: UITableView) {

@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class MainViewController: UIViewController {
 
     @IBOutlet var textField: UITextField!
     @IBOutlet var tableView: UITableView!
+    
     var presenter:MainPresenter?
     var userName:String?
     var password:String?
@@ -20,13 +23,15 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         self.setupTableView(tableView: tableView)
         self.presenter?.syncData(userName: userName!, password: password!, tableView: tableView)
-        title = "My task"
+        self.presenter?.some(textField: textField)
+        title = "My message"
     }
     
     @IBAction func sendMessageButton(_ sender: AnyObject) {
-        self.presenter?.addItem(text: textField.text!)
-        textField.text = ""
+       // self.presenter?.another(text: textField.text!)
+        self.presenter?.clean(textField: textField)
     }
+    
 }
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

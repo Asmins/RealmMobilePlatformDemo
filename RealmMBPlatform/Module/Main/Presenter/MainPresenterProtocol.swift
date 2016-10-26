@@ -10,6 +10,7 @@ import UIKit
 
 protocol MainPresenterProtocol {
     func addItem(text:String)
+    func clean(textField:UITextField)
     func numberOfItem() -> Int
     func setupCell(cell:MessageTableViewCell,indexPath:NSIndexPath,userName:String)
     func syncData(userName:String,password:String,tableView:UITableView)

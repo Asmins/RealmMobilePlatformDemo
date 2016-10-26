@@ -29,13 +29,11 @@ class MessageTableViewCell: UITableViewCell {
         if author == currentUser {
             messageLabel.textAlignment = .right
             userNameLabel.textAlignment = .right
-            messageLabel.text = messageText
-            userNameLabel.text = author
         }else{
             messageLabel.textAlignment = .left
             userNameLabel.textAlignment = .left
-            messageLabel.text = messageText
-            userNameLabel.text = author
         }
+        messageLabel.text = messageText
+        userNameLabel.text = author
     }
 }

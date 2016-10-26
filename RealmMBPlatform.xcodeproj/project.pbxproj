@@ -306,11 +306,11 @@
 				846E64C01DBDFE4A0088D4D3 /* Module */,
 				846E64B11DBDF0C90088D4D3 /* RealmMBPlatform.entitlements */,
 				846E649F1DBDF0B60088D4D3 /* AppDelegate.swift */,
+				84431F321DBE0A0200FEA46E /* RootWireframe.swift */,
 				846E64BE1DBDF7AB0088D4D3 /* Model.swift */,
 				846E64A61DBDF0B60088D4D3 /* Assets.xcassets */,
 				846E64A81DBDF0B60088D4D3 /* LaunchScreen.storyboard */,
 				846E64AB1DBDF0B60088D4D3 /* Info.plist */,
-				84431F321DBE0A0200FEA46E /* RootWireframe.swift */,
 			);
 			path = RealmMBPlatform;
 			sourceTree = "<group>";
