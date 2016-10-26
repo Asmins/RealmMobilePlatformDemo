@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840582851DC0C7AB003B3E84 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840582841DC0C7AB003B3E84 /* MessageCell.xib */; };
+		840582871DC0C8A5003B3E84 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840582861DC0C8A5003B3E84 /* MessageTableViewCell.swift */; };
 		841356A81DC08750005C1565 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841356A71DC08750005C1565 /* Registration.storyboard */; };
 		841356AA1DC0875F005C1565 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841356A91DC0875F005C1565 /* RegistrationViewController.swift */; };
 		841356AC1DC0878B005C1565 /* RegistrationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841356AB1DC0878B005C1565 /* RegistrationInteractor.swift */; };
@@ -59,6 +61,8 @@
 /* Begin PBXFileReference section */
 		0BED3EE8D37D681D203686C8 /* Pods-RealmMBPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmMBPlatform.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmMBPlatform/Pods-RealmMBPlatform.release.xcconfig"; sourceTree = "<group>"; };
 		0F07BDEDA9138D699E922D81 /* Pods-RealmMBPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmMBPlatform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmMBPlatform/Pods-RealmMBPlatform.debug.xcconfig"; sourceTree = "<group>"; };
+		840582841DC0C7AB003B3E84 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		840582861DC0C8A5003B3E84 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		841356A71DC08750005C1565 /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		841356A91DC0875F005C1565 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		841356AB1DC0878B005C1565 /* RegistrationInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationInteractor.swift; sourceTree = "<group>"; };
@@ -114,6 +118,23 @@
 				D85C30DA2A1204999FDCCD7B /* Pods_RealmMBPlatform.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		840582821DC0C783003B3E84 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				840582831DC0C797003B3E84 /* MessageCell */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		840582831DC0C797003B3E84 /* MessageCell */ = {
+			isa = PBXGroup;
+			children = (
+				840582841DC0C7AB003B3E84 /* MessageCell.xib */,
+				840582861DC0C8A5003B3E84 /* MessageTableViewCell.swift */,
+			);
+			path = MessageCell;
 			sourceTree = "<group>";
 		};
 		841356A21DC086D3005C1565 /* Registration */ = {
@@ -281,6 +302,7 @@
 		846E649E1DBDF0B60088D4D3 /* RealmMBPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				840582821DC0C783003B3E84 /* TableViewCell */,
 				846E64C01DBDFE4A0088D4D3 /* Module */,
 				846E64B11DBDF0C90088D4D3 /* RealmMBPlatform.entitlements */,
 				846E649F1DBDF0B60088D4D3 /* AppDelegate.swift */,
@@ -390,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				841356A81DC08750005C1565 /* Registration.storyboard in Resources */,
+				840582851DC0C7AB003B3E84 /* MessageCell.xib in Resources */,
 				84CFBF711DBE2749007B844A /* Login.storyboard in Resources */,
 				84CFBF741DBE2CE1007B844A /* Main.storyboard in Resources */,
 				846E64AA1DBDF0B60088D4D3 /* LaunchScreen.storyboard in Resources */,
@@ -471,6 +494,7 @@
 				841356B21DC087E4005C1565 /* RegistrationPresenterProtocol.swift in Sources */,
 				841356B01DC087C3005C1565 /* RegistrationPresenter.swift in Sources */,
 				841356B41DC087F4005C1565 /* RegistrationWireframe.swift in Sources */,
+				840582871DC0C8A5003B3E84 /* MessageTableViewCell.swift in Sources */,
 				84CFBF7A1DBE33B3007B844A /* MainInteractorProtocol.swift in Sources */,
 				84CFBF721DBE2749007B844A /* LoginViewController.swift in Sources */,
 				84CFBF781DBE33A2007B844A /* MainInteractor.swift in Sources */,

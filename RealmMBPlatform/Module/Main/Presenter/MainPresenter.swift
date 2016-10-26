@@ -13,7 +13,7 @@ class MainPresenter {
 }
 
 extension MainPresenter: MainPresenterProtocol {
-    
+
     func addItem(text: String) {
         self.interactor?.addNewTask(text: text)
     }
@@ -22,12 +22,13 @@ extension MainPresenter: MainPresenterProtocol {
         self.interactor?.synchronizeData(userName: userName, password: password, tableView: tableView)
     }
     
-    func setupCell(cell:UITableViewCell,indexPath:NSIndexPath) {
-        cell.textLabel?.text = self.interactor?.message[indexPath.row].textMessage
-        cell.detailTextLabel?.text = self.interactor?.message[indexPath.row].user
-    }
-    
     func numberOfItem() -> Int {
         return (self.interactor?.message.count)!
+    }
+    
+    func setupCell(cell: MessageTableViewCell, indexPath: NSIndexPath,userName:String) {
+        cell.configCell(messageText: (interactor?.message[indexPath.row].textMessage)!,
+                        author: (interactor?.message[indexPath.row].user)!,
+                        currentUser: userName)
     }
 }

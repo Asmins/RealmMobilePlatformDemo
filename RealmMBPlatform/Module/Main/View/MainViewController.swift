@@ -18,6 +18,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupTableView(tableView: tableView)
         self.presenter?.syncData(userName: userName!, password: password!, tableView: tableView)
         title = "My task"
     }
@@ -29,12 +30,24 @@ class MainViewController: UIViewController {
 }
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")! as UITableViewCell
-        self.presenter?.setupCell(cell: cell, indexPath: indexPath as NSIndexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell") as! MessageTableViewCell
+        self.presenter?.setupCell(cell: cell, indexPath: indexPath as NSIndexPath, userName: userName!)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (self.presenter?.numberOfItem())!
+    }
+}
+
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(50)
+    }
+}
+
+extension MainViewController {
+    func setupTableView(tableView:UITableView) {
+        tableView.register(UINib(nibName: "MessageCell", bundle: nil) , forCellReuseIdentifier: "MessageCell")
     }
 }
