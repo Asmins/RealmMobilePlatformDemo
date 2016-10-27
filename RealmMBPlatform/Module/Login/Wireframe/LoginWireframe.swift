@@ -14,7 +14,7 @@ class LoginWireframe {
 }
 
 extension LoginWireframe: LoginWireframeProtocol {
-   
+    
     func showLoginView() {
         let loginViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         self.loginViewController = loginViewController
@@ -27,18 +27,20 @@ extension LoginWireframe: LoginWireframeProtocol {
     }
     
     func showMainView(userName:String,password:String) {
-        let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
-        mainViewController.userName = userName
-        mainViewController.password = password
-        mainViewController.presenter = MainPresenter()
-        mainViewController.presenter?.interactor = MainInteractor()
-        loginViewController?.navigationController?.pushViewController(mainViewController, animated: true)
-       /*
+        /*
+         let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+         mainViewController.userName = userName
+         mainViewController.password = password
+         mainViewController.presenter = MainPresenter()
+         mainViewController.presenter?.interactor = MainInteractor()
+         loginViewController?.navigationController?.pushViewController(mainViewController, animated: true)
+         */
         let roomsViewController = UIStoryboard(name: "Rooms", bundle: nil).instantiateViewController(withIdentifier: "RoomsViewController") as! RoomsViewController
         roomsViewController.navigation = RoomsWireframe()
+        roomsViewController.navigation?.roomViewController = roomsViewController
         roomsViewController.presenter = RoomsPresenter()
         roomsViewController.presenter?.interactor = RoomsInteractor()
-        loginViewController?.navigationController?.pushViewController(roomsViewController, animated: true) */
+        loginViewController?.navigationController?.pushViewController(roomsViewController, animated: true)
     }
     
     func showRegistrView() {

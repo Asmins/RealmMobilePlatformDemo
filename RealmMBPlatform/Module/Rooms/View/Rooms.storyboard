@@ -31,7 +31,7 @@
                             <constraint firstAttribute="trailing" secondItem="tFb-Xs-Wqa" secondAttribute="trailing" id="2Fz-0X-yNr"/>
                             <constraint firstItem="tFb-Xs-Wqa" firstAttribute="leading" secondItem="zYZ-Y1-017" secondAttribute="leading" id="PWx-5G-n2M"/>
                             <constraint firstItem="wvO-Go-GDV" firstAttribute="top" secondItem="tFb-Xs-Wqa" secondAttribute="bottom" id="u44-we-TnX"/>
-                            <constraint firstItem="tFb-Xs-Wqa" firstAttribute="top" secondItem="5nD-mv-bVY" secondAttribute="bottom" id="yan-a2-akC"/>
+                            <constraint firstItem="tFb-Xs-Wqa" firstAttribute="top" secondItem="5nD-mv-bVY" secondAttribute="bottom" constant="-64" id="yan-a2-akC"/>
                         </constraints>
                     </view>
                     <connections>

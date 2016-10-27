@@ -17,6 +17,8 @@
 		841356B21DC087E4005C1565 /* RegistrationPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841356B11DC087E4005C1565 /* RegistrationPresenterProtocol.swift */; };
 		841356B41DC087F4005C1565 /* RegistrationWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841356B31DC087F4005C1565 /* RegistrationWireframe.swift */; };
 		841356B61DC08816005C1565 /* RegistrationWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841356B51DC08816005C1565 /* RegistrationWireframeProtocol.swift */; };
+		841D6B3E1DC292D3007A9B4A /* CreateRoomPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D6B3D1DC292D3007A9B4A /* CreateRoomPresenter.swift */; };
+		841D6B401DC292EA007A9B4A /* CreateRoomPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D6B3F1DC292EA007A9B4A /* CreateRoomPresenterProtocol.swift */; };
 		84431F331DBE0A0200FEA46E /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84431F321DBE0A0200FEA46E /* RootWireframe.swift */; };
 		84431F351DBE0A7F00FEA46E /* LoginWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84431F341DBE0A7F00FEA46E /* LoginWireframe.swift */; };
 		84431F371DBE0A8C00FEA46E /* LoginWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84431F361DBE0A8C00FEA46E /* LoginWireframeProtocol.swift */; };
@@ -50,6 +52,17 @@
 		84CFBF7A1DBE33B3007B844A /* MainInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFBF791DBE33B3007B844A /* MainInteractorProtocol.swift */; };
 		84CFBF7C1DBE33EF007B844A /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFBF7B1DBE33EF007B844A /* MainPresenter.swift */; };
 		84CFBF7E1DBE3402007B844A /* MainPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFBF7D1DBE3402007B844A /* MainPresenterProtocol.swift */; };
+		84F045A41DC22FA8009C2EF3 /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F045A31DC22FA8009C2EF3 /* Create.storyboard */; };
+		84F045A61DC23035009C2EF3 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F045A51DC23035009C2EF3 /* CreateViewController.swift */; };
+		84F045A91DC230E6009C2EF3 /* CreateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F045A81DC230E6009C2EF3 /* CreateCell.xib */; };
+		84F045AB1DC23188009C2EF3 /* CreateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F045AA1DC23188009C2EF3 /* CreateCell.swift */; };
+		84F215F71DC2883400FD8595 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F215F61DC2883400FD8595 /* HeaderView.xib */; };
+		84F215F91DC2889300FD8595 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F215F81DC2889300FD8595 /* HeaderView.swift */; };
+		84F215FC1DC28C2D00FD8595 /* SaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F215FB1DC28C2D00FD8595 /* SaveCell.xib */; };
+		84F215FE1DC28C7700FD8595 /* SaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F215FD1DC28C7700FD8595 /* SaveCell.swift */; };
+		84F216001DC28F2200FD8595 /* CreateRoomInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F215FF1DC28F2200FD8595 /* CreateRoomInteractor.swift */; };
+		84F216021DC28F4200FD8595 /* CreateRoomInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F216011DC28F4200FD8595 /* CreateRoomInteractorProtocol.swift */; };
+		84F216041DC28F9D00FD8595 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F216031DC28F9D00FD8595 /* Room.swift */; };
 		8DB2CD237550B1FCB34C7CE1 /* Pods_RealmMBPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85C30DA2A1204999FDCCD7B /* Pods_RealmMBPlatform.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +94,8 @@
 		841356B11DC087E4005C1565 /* RegistrationPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPresenterProtocol.swift; sourceTree = "<group>"; };
 		841356B31DC087F4005C1565 /* RegistrationWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationWireframe.swift; sourceTree = "<group>"; };
 		841356B51DC08816005C1565 /* RegistrationWireframeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationWireframeProtocol.swift; sourceTree = "<group>"; };
+		841D6B3D1DC292D3007A9B4A /* CreateRoomPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRoomPresenter.swift; sourceTree = "<group>"; };
+		841D6B3F1DC292EA007A9B4A /* CreateRoomPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRoomPresenterProtocol.swift; sourceTree = "<group>"; };
 		84431F321DBE0A0200FEA46E /* RootWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootWireframe.swift; sourceTree = "<group>"; };
 		84431F341DBE0A7F00FEA46E /* LoginWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWireframe.swift; sourceTree = "<group>"; };
 		84431F361DBE0A8C00FEA46E /* LoginWireframeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWireframeProtocol.swift; sourceTree = "<group>"; };
@@ -115,6 +130,17 @@
 		84CFBF791DBE33B3007B844A /* MainInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInteractorProtocol.swift; sourceTree = "<group>"; };
 		84CFBF7B1DBE33EF007B844A /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		84CFBF7D1DBE3402007B844A /* MainPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenterProtocol.swift; sourceTree = "<group>"; };
+		84F045A31DC22FA8009C2EF3 /* Create.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
+		84F045A51DC23035009C2EF3 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		84F045A81DC230E6009C2EF3 /* CreateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateCell.xib; sourceTree = "<group>"; };
+		84F045AA1DC23188009C2EF3 /* CreateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCell.swift; sourceTree = "<group>"; };
+		84F215F61DC2883400FD8595 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		84F215F81DC2889300FD8595 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		84F215FB1DC28C2D00FD8595 /* SaveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveCell.xib; sourceTree = "<group>"; };
+		84F215FD1DC28C7700FD8595 /* SaveCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveCell.swift; sourceTree = "<group>"; };
+		84F215FF1DC28F2200FD8595 /* CreateRoomInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRoomInteractor.swift; sourceTree = "<group>"; };
+		84F216011DC28F4200FD8595 /* CreateRoomInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRoomInteractorProtocol.swift; sourceTree = "<group>"; };
+		84F216031DC28F9D00FD8595 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		D85C30DA2A1204999FDCCD7B /* Pods_RealmMBPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmMBPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -143,6 +169,8 @@
 		840582821DC0C783003B3E84 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				84F215FA1DC28C1A00FD8595 /* SaveCell */,
+				84F045A71DC23099009C2EF3 /* CreateCell */,
 				8455CB6D1DC1FE2C009CE511 /* RoomsCell */,
 				840582831DC0C797003B3E84 /* MessageCell */,
 			);
@@ -379,6 +407,7 @@
 		846E649E1DBDF0B60088D4D3 /* RealmMBPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				84F215F51DC2882000FD8595 /* HeaderView */,
 				840582821DC0C783003B3E84 /* TableViewCell */,
 				846E64C01DBDFE4A0088D4D3 /* Module */,
 				846E64B11DBDF0C90088D4D3 /* RealmMBPlatform.entitlements */,
@@ -388,6 +417,7 @@
 				846E64A61DBDF0B60088D4D3 /* Assets.xcassets */,
 				846E64A81DBDF0B60088D4D3 /* LaunchScreen.storyboard */,
 				846E64AB1DBDF0B60088D4D3 /* Info.plist */,
+				84F216031DC28F9D00FD8595 /* Room.swift */,
 			);
 			path = RealmMBPlatform;
 			sourceTree = "<group>";
@@ -404,12 +434,86 @@
 		846E64C01DBDFE4A0088D4D3 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				84F0459E1DC22F5A009C2EF3 /* CreateRoom */,
 				8455CB581DC1FC27009CE511 /* Rooms */,
 				841356A21DC086D3005C1565 /* Registration */,
 				84431F231DBE085200FEA46E /* Main */,
 				84431F221DBE084700FEA46E /* Login */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		84F0459E1DC22F5A009C2EF3 /* CreateRoom */ = {
+			isa = PBXGroup;
+			children = (
+				84F045A21DC22F97009C2EF3 /* Wireframe */,
+				84F045A11DC22F89009C2EF3 /* Presenter */,
+				84F045A01DC22F7A009C2EF3 /* Interactor */,
+				84F0459F1DC22F70009C2EF3 /* View */,
+			);
+			name = CreateRoom;
+			path = CreateRooms;
+			sourceTree = "<group>";
+		};
+		84F0459F1DC22F70009C2EF3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84F045A31DC22FA8009C2EF3 /* Create.storyboard */,
+				84F045A51DC23035009C2EF3 /* CreateViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84F045A01DC22F7A009C2EF3 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				84F215FF1DC28F2200FD8595 /* CreateRoomInteractor.swift */,
+				84F216011DC28F4200FD8595 /* CreateRoomInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		84F045A11DC22F89009C2EF3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				841D6B3D1DC292D3007A9B4A /* CreateRoomPresenter.swift */,
+				841D6B3F1DC292EA007A9B4A /* CreateRoomPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		84F045A21DC22F97009C2EF3 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		84F045A71DC23099009C2EF3 /* CreateCell */ = {
+			isa = PBXGroup;
+			children = (
+				84F045A81DC230E6009C2EF3 /* CreateCell.xib */,
+				84F045AA1DC23188009C2EF3 /* CreateCell.swift */,
+			);
+			path = CreateCell;
+			sourceTree = "<group>";
+		};
+		84F215F51DC2882000FD8595 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				84F215F61DC2883400FD8595 /* HeaderView.xib */,
+				84F215F81DC2889300FD8595 /* HeaderView.swift */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		84F215FA1DC28C1A00FD8595 /* SaveCell */ = {
+			isa = PBXGroup;
+			children = (
+				84F215FB1DC28C2D00FD8595 /* SaveCell.xib */,
+				84F215FD1DC28C7700FD8595 /* SaveCell.swift */,
+			);
+			path = SaveCell;
 			sourceTree = "<group>";
 		};
 		9009CC79B67966EEA12BF015 /* Pods */ = {
@@ -490,10 +594,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				841356A81DC08750005C1565 /* Registration.storyboard in Resources */,
+				84F045A91DC230E6009C2EF3 /* CreateCell.xib in Resources */,
+				84F045A41DC22FA8009C2EF3 /* Create.storyboard in Resources */,
+				84F215F71DC2883400FD8595 /* HeaderView.xib in Resources */,
 				840582851DC0C7AB003B3E84 /* MessageCell.xib in Resources */,
 				84CFBF711DBE2749007B844A /* Login.storyboard in Resources */,
 				84CFBF741DBE2CE1007B844A /* Main.storyboard in Resources */,
 				846E64AA1DBDF0B60088D4D3 /* LaunchScreen.storyboard in Resources */,
+				84F215FC1DC28C2D00FD8595 /* SaveCell.xib in Resources */,
 				846E64A71DBDF0B60088D4D3 /* Assets.xcassets in Resources */,
 				8455CB6F1DC1FE42009CE511 /* RoomsCell.xib in Resources */,
 				8455CB601DC1FC94009CE511 /* Rooms.storyboard in Resources */,
@@ -557,26 +665,34 @@
 			files = (
 				84CFBF6E1DBE2714007B844A /* LoginPresenterProtocol.swift in Sources */,
 				84431F371DBE0A8C00FEA46E /* LoginWireframeProtocol.swift in Sources */,
+				84F216041DC28F9D00FD8595 /* Room.swift in Sources */,
 				84431F331DBE0A0200FEA46E /* RootWireframe.swift in Sources */,
 				84CFBF761DBE2D03007B844A /* MainViewController.swift in Sources */,
 				84431F3B1DBE0DB500FEA46E /* LoginProtocol.swift in Sources */,
 				8455CB641DC1FCE1009CE511 /* RoomsInteractorProtocol.swift in Sources */,
 				84CFBF7E1DBE3402007B844A /* MainPresenterProtocol.swift in Sources */,
 				84CFBF6D1DBE2714007B844A /* LoginPresenter.swift in Sources */,
+				841D6B3E1DC292D3007A9B4A /* CreateRoomPresenter.swift in Sources */,
+				84F216021DC28F4200FD8595 /* CreateRoomInteractorProtocol.swift in Sources */,
+				84F045A61DC23035009C2EF3 /* CreateViewController.swift in Sources */,
 				841356AC1DC0878B005C1565 /* RegistrationInteractor.swift in Sources */,
 				84431F351DBE0A7F00FEA46E /* LoginWireframe.swift in Sources */,
 				84431F391DBE0DA100FEA46E /* LoginInteractor.swift in Sources */,
 				8455CB6C1DC1FD3A009CE511 /* RoomsWireframeProtocol.swift in Sources */,
+				84F045AB1DC23188009C2EF3 /* CreateCell.swift in Sources */,
 				846E64BF1DBDF7AB0088D4D3 /* Model.swift in Sources */,
 				8455CB661DC1FCF1009CE511 /* RoomsPresenter.swift in Sources */,
 				8455CB681DC1FD0F009CE511 /* RoomsPresenterProtocol.swift in Sources */,
 				8455CB711DC1FE71009CE511 /* RoomsCell.swift in Sources */,
+				84F215FE1DC28C7700FD8595 /* SaveCell.swift in Sources */,
 				8455CB621DC1FCC7009CE511 /* RoomsInteractor.swift in Sources */,
 				8455CB6A1DC1FD27009CE511 /* RoomsWireframe.swift in Sources */,
 				841356AE1DC087B0005C1565 /* RegistrationInteractorProtocol.swift in Sources */,
 				841356AA1DC0875F005C1565 /* RegistrationViewController.swift in Sources */,
 				84CFBF7C1DBE33EF007B844A /* MainPresenter.swift in Sources */,
+				84F215F91DC2889300FD8595 /* HeaderView.swift in Sources */,
 				846E64A01DBDF0B60088D4D3 /* AppDelegate.swift in Sources */,
+				841D6B401DC292EA007A9B4A /* CreateRoomPresenterProtocol.swift in Sources */,
 				841356B61DC08816005C1565 /* RegistrationWireframeProtocol.swift in Sources */,
 				841356B21DC087E4005C1565 /* RegistrationPresenterProtocol.swift in Sources */,
 				841356B01DC087C3005C1565 /* RegistrationPresenter.swift in Sources */,
@@ -584,6 +700,7 @@
 				8455CB5E1DC1FC8A009CE511 /* RoomsViewController.swift in Sources */,
 				840582871DC0C8A5003B3E84 /* MessageTableViewCell.swift in Sources */,
 				84CFBF7A1DBE33B3007B844A /* MainInteractorProtocol.swift in Sources */,
+				84F216001DC28F2200FD8595 /* CreateRoomInteractor.swift in Sources */,
 				84CFBF721DBE2749007B844A /* LoginViewController.swift in Sources */,
 				84CFBF781DBE33A2007B844A /* MainInteractor.swift in Sources */,
 			);

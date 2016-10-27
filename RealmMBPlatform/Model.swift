@@ -16,6 +16,7 @@ class Message: Object {
 
 class Rooms: Object{
     dynamic var nameRooms = ""
-    dynamic var count = 0
-    dynamic var urlToimage = ""
+    dynamic var type = ""
+    dynamic var access = ""
+    dynamic var password = ""
 }

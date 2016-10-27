@@ -7,7 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class RoomsInteractor {
-    
+  //  let realm = try! Realm()
+}
+
+extension RoomsInteractor: RoomsInteractorProtocol {
+ 
 }

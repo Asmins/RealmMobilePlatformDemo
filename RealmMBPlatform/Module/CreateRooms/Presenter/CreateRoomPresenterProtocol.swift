@@ -1,5 +1,5 @@
 //
-//  RoomsWireframeProtocol.swift
+//  CreateRoomPresenterProtocol.swift
 //  RealmMBPlatform
 //
 //  Created by admin on 27.10.16.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol RoomsWireframeProtocol {
-    func showCreateView()
+protocol CreateRoomPresenterProtocol {
+    func add(room:Room)
 }
