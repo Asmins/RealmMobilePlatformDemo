@@ -28,6 +28,7 @@ class MainInteractor {
         textField.rx.text.bindTo(textVariavble).addDisposableTo(disposeBag)
         
         textVariavble.asObservable().throttle(0.1, scheduler: MainScheduler.instance).subscribe(onNext: { text in
+            print(text!)
             if text?.isEmpty == false{
                 if self.bool == false{
                     try! self.realm.write {
@@ -68,14 +69,6 @@ extension MainInteractor: MainInteractorProtocol {
         self.bool = false
         textField.text = ""
     }
-    /*
-     func insert(text: String) {
-     let message = realm.objects(Message).last
-     try! realm.write {
-     message?.textMessage = text
-     }
-     }
-     */
     
     func synchronizeData(userName: String, password: String,tableView:UITableView) {
         let url = URL(string: "http://127.0.0.1:9080")

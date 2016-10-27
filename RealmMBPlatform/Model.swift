@@ -13,3 +13,9 @@ class Message: Object {
     dynamic var textMessage = ""
     dynamic var user = ""
 }
+
+class Rooms: Object{
+    dynamic var nameRooms = ""
+    dynamic var count = 0
+    dynamic var urlToimage = ""
+}

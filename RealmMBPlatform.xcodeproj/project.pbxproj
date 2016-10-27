@@ -22,6 +22,16 @@
 		84431F371DBE0A8C00FEA46E /* LoginWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84431F361DBE0A8C00FEA46E /* LoginWireframeProtocol.swift */; };
 		84431F391DBE0DA100FEA46E /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84431F381DBE0DA100FEA46E /* LoginInteractor.swift */; };
 		84431F3B1DBE0DB500FEA46E /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84431F3A1DBE0DB500FEA46E /* LoginProtocol.swift */; };
+		8455CB5E1DC1FC8A009CE511 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455CB5D1DC1FC8A009CE511 /* RoomsViewController.swift */; };
+		8455CB601DC1FC94009CE511 /* Rooms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8455CB5F1DC1FC94009CE511 /* Rooms.storyboard */; };
+		8455CB621DC1FCC7009CE511 /* RoomsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455CB611DC1FCC7009CE511 /* RoomsInteractor.swift */; };
+		8455CB641DC1FCE1009CE511 /* RoomsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455CB631DC1FCE1009CE511 /* RoomsInteractorProtocol.swift */; };
+		8455CB661DC1FCF1009CE511 /* RoomsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455CB651DC1FCF1009CE511 /* RoomsPresenter.swift */; };
+		8455CB681DC1FD0F009CE511 /* RoomsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455CB671DC1FD0F009CE511 /* RoomsPresenterProtocol.swift */; };
+		8455CB6A1DC1FD27009CE511 /* RoomsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455CB691DC1FD27009CE511 /* RoomsWireframe.swift */; };
+		8455CB6C1DC1FD3A009CE511 /* RoomsWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455CB6B1DC1FD3A009CE511 /* RoomsWireframeProtocol.swift */; };
+		8455CB6F1DC1FE42009CE511 /* RoomsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8455CB6E1DC1FE42009CE511 /* RoomsCell.xib */; };
+		8455CB711DC1FE71009CE511 /* RoomsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455CB701DC1FE71009CE511 /* RoomsCell.swift */; };
 		846E64A01DBDF0B60088D4D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E649F1DBDF0B60088D4D3 /* AppDelegate.swift */; };
 		846E64A71DBDF0B60088D4D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846E64A61DBDF0B60088D4D3 /* Assets.xcassets */; };
 		846E64AA1DBDF0B60088D4D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846E64A81DBDF0B60088D4D3 /* LaunchScreen.storyboard */; };
@@ -76,6 +86,16 @@
 		84431F361DBE0A8C00FEA46E /* LoginWireframeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWireframeProtocol.swift; sourceTree = "<group>"; };
 		84431F381DBE0DA100FEA46E /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		84431F3A1DBE0DB500FEA46E /* LoginProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
+		8455CB5D1DC1FC8A009CE511 /* RoomsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
+		8455CB5F1DC1FC94009CE511 /* Rooms.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Rooms.storyboard; sourceTree = "<group>"; };
+		8455CB611DC1FCC7009CE511 /* RoomsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsInteractor.swift; sourceTree = "<group>"; };
+		8455CB631DC1FCE1009CE511 /* RoomsInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsInteractorProtocol.swift; sourceTree = "<group>"; };
+		8455CB651DC1FCF1009CE511 /* RoomsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsPresenter.swift; sourceTree = "<group>"; };
+		8455CB671DC1FD0F009CE511 /* RoomsPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsPresenterProtocol.swift; sourceTree = "<group>"; };
+		8455CB691DC1FD27009CE511 /* RoomsWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsWireframe.swift; sourceTree = "<group>"; };
+		8455CB6B1DC1FD3A009CE511 /* RoomsWireframeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsWireframeProtocol.swift; sourceTree = "<group>"; };
+		8455CB6E1DC1FE42009CE511 /* RoomsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomsCell.xib; sourceTree = "<group>"; };
+		8455CB701DC1FE71009CE511 /* RoomsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsCell.swift; sourceTree = "<group>"; };
 		846E649C1DBDF0B60088D4D3 /* RealmMBPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmMBPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846E649F1DBDF0B60088D4D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846E64A61DBDF0B60088D4D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -123,6 +143,7 @@
 		840582821DC0C783003B3E84 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				8455CB6D1DC1FE2C009CE511 /* RoomsCell */,
 				840582831DC0C797003B3E84 /* MessageCell */,
 			);
 			path = TableViewCell;
@@ -280,6 +301,62 @@
 			path = Main/Wireframe;
 			sourceTree = "<group>";
 		};
+		8455CB581DC1FC27009CE511 /* Rooms */ = {
+			isa = PBXGroup;
+			children = (
+				8455CB5C1DC1FC67009CE511 /* Wireframe */,
+				8455CB5B1DC1FC5C009CE511 /* Presenter */,
+				8455CB5A1DC1FC46009CE511 /* Interactor */,
+				8455CB591DC1FC3C009CE511 /* View */,
+			);
+			path = Rooms;
+			sourceTree = "<group>";
+		};
+		8455CB591DC1FC3C009CE511 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8455CB5D1DC1FC8A009CE511 /* RoomsViewController.swift */,
+				8455CB5F1DC1FC94009CE511 /* Rooms.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8455CB5A1DC1FC46009CE511 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8455CB611DC1FCC7009CE511 /* RoomsInteractor.swift */,
+				8455CB631DC1FCE1009CE511 /* RoomsInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8455CB5B1DC1FC5C009CE511 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8455CB651DC1FCF1009CE511 /* RoomsPresenter.swift */,
+				8455CB671DC1FD0F009CE511 /* RoomsPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8455CB5C1DC1FC67009CE511 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				8455CB691DC1FD27009CE511 /* RoomsWireframe.swift */,
+				8455CB6B1DC1FD3A009CE511 /* RoomsWireframeProtocol.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		8455CB6D1DC1FE2C009CE511 /* RoomsCell */ = {
+			isa = PBXGroup;
+			children = (
+				8455CB6E1DC1FE42009CE511 /* RoomsCell.xib */,
+				8455CB701DC1FE71009CE511 /* RoomsCell.swift */,
+			);
+			path = RoomsCell;
+			sourceTree = "<group>";
+		};
 		846E64931DBDF0B60088D4D3 = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +404,7 @@
 		846E64C01DBDFE4A0088D4D3 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				8455CB581DC1FC27009CE511 /* Rooms */,
 				841356A21DC086D3005C1565 /* Registration */,
 				84431F231DBE085200FEA46E /* Main */,
 				84431F221DBE084700FEA46E /* Login */,
@@ -417,6 +495,8 @@
 				84CFBF741DBE2CE1007B844A /* Main.storyboard in Resources */,
 				846E64AA1DBDF0B60088D4D3 /* LaunchScreen.storyboard in Resources */,
 				846E64A71DBDF0B60088D4D3 /* Assets.xcassets in Resources */,
+				8455CB6F1DC1FE42009CE511 /* RoomsCell.xib in Resources */,
+				8455CB601DC1FC94009CE511 /* Rooms.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,12 +560,19 @@
 				84431F331DBE0A0200FEA46E /* RootWireframe.swift in Sources */,
 				84CFBF761DBE2D03007B844A /* MainViewController.swift in Sources */,
 				84431F3B1DBE0DB500FEA46E /* LoginProtocol.swift in Sources */,
+				8455CB641DC1FCE1009CE511 /* RoomsInteractorProtocol.swift in Sources */,
 				84CFBF7E1DBE3402007B844A /* MainPresenterProtocol.swift in Sources */,
 				84CFBF6D1DBE2714007B844A /* LoginPresenter.swift in Sources */,
 				841356AC1DC0878B005C1565 /* RegistrationInteractor.swift in Sources */,
 				84431F351DBE0A7F00FEA46E /* LoginWireframe.swift in Sources */,
 				84431F391DBE0DA100FEA46E /* LoginInteractor.swift in Sources */,
+				8455CB6C1DC1FD3A009CE511 /* RoomsWireframeProtocol.swift in Sources */,
 				846E64BF1DBDF7AB0088D4D3 /* Model.swift in Sources */,
+				8455CB661DC1FCF1009CE511 /* RoomsPresenter.swift in Sources */,
+				8455CB681DC1FD0F009CE511 /* RoomsPresenterProtocol.swift in Sources */,
+				8455CB711DC1FE71009CE511 /* RoomsCell.swift in Sources */,
+				8455CB621DC1FCC7009CE511 /* RoomsInteractor.swift in Sources */,
+				8455CB6A1DC1FD27009CE511 /* RoomsWireframe.swift in Sources */,
 				841356AE1DC087B0005C1565 /* RegistrationInteractorProtocol.swift in Sources */,
 				841356AA1DC0875F005C1565 /* RegistrationViewController.swift in Sources */,
 				84CFBF7C1DBE33EF007B844A /* MainPresenter.swift in Sources */,
@@ -494,6 +581,7 @@
 				841356B21DC087E4005C1565 /* RegistrationPresenterProtocol.swift in Sources */,
 				841356B01DC087C3005C1565 /* RegistrationPresenter.swift in Sources */,
 				841356B41DC087F4005C1565 /* RegistrationWireframe.swift in Sources */,
+				8455CB5E1DC1FC8A009CE511 /* RoomsViewController.swift in Sources */,
 				840582871DC0C8A5003B3E84 /* MessageTableViewCell.swift in Sources */,
 				84CFBF7A1DBE33B3007B844A /* MainInteractorProtocol.swift in Sources */,
 				84CFBF721DBE2749007B844A /* LoginViewController.swift in Sources */,

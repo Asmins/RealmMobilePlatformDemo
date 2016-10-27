@@ -28,7 +28,6 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func sendMessageButton(_ sender: AnyObject) {
-       // self.presenter?.another(text: textField.text!)
         self.presenter?.clean(textField: textField)
     }
     
