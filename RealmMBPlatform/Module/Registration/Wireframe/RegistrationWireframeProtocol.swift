@@ -6,8 +6,8 @@
 //  Copyright © 2016 Mozi. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol RegistrationWireframeProtocol {
-    
+    func dismiss(viewController:UIViewController)
 }

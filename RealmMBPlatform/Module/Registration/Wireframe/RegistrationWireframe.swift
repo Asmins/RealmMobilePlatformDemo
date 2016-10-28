@@ -9,5 +9,11 @@
 import UIKit
 
 class RegistrationWireframe {
-    
+    var registerView:RegistrationViewController?
+}
+
+extension RegistrationWireframe: RegistrationWireframeProtocol {
+    func dismiss(viewController: UIViewController) {
+        viewController.navigationController?.popToRootViewController(animated: true)
+    }
 }

@@ -15,7 +15,7 @@ class RegistrationViewController: UIViewController {
     @IBOutlet var textFieldPassword: UITextField!
 
     var presenter: RegistrationPresenter?
-    
+    var navigation: RegistrationWireframe?
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Registration"
@@ -23,5 +23,6 @@ class RegistrationViewController: UIViewController {
     
     @IBAction func doneButton(_ sender: AnyObject) {
         self.presenter?.register(userName: textFieldName.text!, password: textFieldPassword.text!)
+        self.navigation?.dismiss(viewController: self)
     }
 }

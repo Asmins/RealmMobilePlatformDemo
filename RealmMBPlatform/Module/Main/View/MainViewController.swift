@@ -44,14 +44,10 @@ extension MainViewController: UITableViewDataSource {
     }
 }
 
-extension MainViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(50)
-    }
-}
-
 extension MainViewController {
     func setupTableView(tableView:UITableView) {
         tableView.register(UINib(nibName: "MessageCell", bundle: nil) , forCellReuseIdentifier: "MessageCell")
+        tableView.estimatedRowHeight = CGFloat(60)
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 }

@@ -35,6 +35,7 @@ extension LoginWireframe: LoginWireframeProtocol {
          mainViewController.presenter?.interactor = MainInteractor()
          loginViewController?.navigationController?.pushViewController(mainViewController, animated: true)
          */
+        
         let roomsViewController = UIStoryboard(name: "Rooms", bundle: nil).instantiateViewController(withIdentifier: "RoomsViewController") as! RoomsViewController
         roomsViewController.navigation = RoomsWireframe()
         roomsViewController.navigation?.roomViewController = roomsViewController
@@ -47,6 +48,8 @@ extension LoginWireframe: LoginWireframeProtocol {
         let registerView = UIStoryboard(name: "Registration", bundle: nil).instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
         registerView.presenter = RegistrationPresenter()
         registerView.presenter?.interactor = RegistrationInteractor()
+        registerView.navigation = RegistrationWireframe()
+        registerView.navigation?.registerView = registerView
         loginViewController?.navigationController?.pushViewController(registerView, animated: true)
     }
 }

@@ -15,23 +15,24 @@
                 <frame key="frameInset" width="374" height="59.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pz4-2M-qFs">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pz4-2M-qFs">
                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuF-Ke-FhA">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuF-Ke-FhA">
                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="pz4-2M-qFs" firstAttribute="top" secondItem="tED-1a-I4E" secondAttribute="top" constant="10" id="1Xh-Fk-2Lz"/>
+                    <constraint firstItem="QuF-Ke-FhA" firstAttribute="top" secondItem="pz4-2M-qFs" secondAttribute="bottom" constant="5" id="9ch-Ml-urg"/>
                     <constraint firstAttribute="trailing" secondItem="QuF-Ke-FhA" secondAttribute="trailing" constant="10" id="Ip6-0f-5kK"/>
-                    <constraint firstAttribute="trailing" secondItem="pz4-2M-qFs" secondAttribute="trailing" constant="10" id="YVf-BA-NNE"/>
-                    <constraint firstItem="pz4-2M-qFs" firstAttribute="leading" secondItem="tED-1a-I4E" secondAttribute="leading" constant="10" id="hmt-Qf-Khb"/>
+                    <constraint firstAttribute="trailing" secondItem="pz4-2M-qFs" secondAttribute="trailing" constant="10" id="Xel-yL-qgP"/>
+                    <constraint firstItem="pz4-2M-qFs" firstAttribute="leading" secondItem="tED-1a-I4E" secondAttribute="leading" constant="10" id="eKC-63-wT9"/>
                     <constraint firstItem="QuF-Ke-FhA" firstAttribute="leading" secondItem="tED-1a-I4E" secondAttribute="leading" constant="10" id="iz2-D3-1sV"/>
-                    <constraint firstItem="pz4-2M-qFs" firstAttribute="top" secondItem="tED-1a-I4E" secondAttribute="top" constant="10" id="nM8-hl-JNr"/>
                     <constraint firstAttribute="bottom" secondItem="QuF-Ke-FhA" secondAttribute="bottom" constant="5" id="ytw-a0-2WQ"/>
                 </constraints>
             </tableViewCellContentView>
