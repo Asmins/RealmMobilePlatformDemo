@@ -27,6 +27,10 @@ extension LoginWireframe: LoginWireframeProtocol {
     }
     
     func showMainView(userName:String,password:String) {
+       	/*
+			If you want to see mainView with message uncomment fistr part code 
+			if you want to see rooms and createRoom views uncoment second part
+		*/
         /*
          let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
          mainViewController.userName = userName

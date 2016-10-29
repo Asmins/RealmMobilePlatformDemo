@@ -18,29 +18,98 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="ejv-Bm-WyT">
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Room" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1W-Kp-TH2">
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter name room" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X8s-Eb-iCi">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What about this Room" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lu8-iX-6gw">
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Type Room" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EGn-7q-bHo">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access type Room" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zno-aG-A3l">
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YD6-41-xqC">
+                                <segments>
+                                    <segment title="Private"/>
+                                    <segment title="Publick"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDr-rT-Kk2">
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password Room" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="roz-Wr-Ex1">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOd-7K-BqQ">
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="1" green="0.056107677719999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <outlet property="dataSource" destination="NNZ-YY-frj" id="fXT-0G-Iy5"/>
-                                    <outlet property="delegate" destination="NNZ-YY-frj" id="AoC-K5-lT3"/>
+                                    <action selector="saveButtonAction:" destination="NNZ-YY-frj" eventType="touchUpInside" id="5F2-GV-7oO"/>
                                 </connections>
-                            </tableView>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ejv-Bm-WyT" secondAttribute="trailing" id="Jza-xt-g8V"/>
-                            <constraint firstItem="ejv-Bm-WyT" firstAttribute="top" secondItem="IHT-2r-lKa" secondAttribute="bottom" constant="-64" id="eUq-Yn-PkK"/>
-                            <constraint firstItem="ejv-Bm-WyT" firstAttribute="leading" secondItem="4mn-0I-qu2" secondAttribute="leading" id="jSg-wk-ubk"/>
-                            <constraint firstItem="mwz-49-aLp" firstAttribute="top" secondItem="ejv-Bm-WyT" secondAttribute="bottom" id="l1C-Bh-Jg5"/>
+                            <constraint firstItem="YD6-41-xqC" firstAttribute="top" secondItem="Zno-aG-A3l" secondAttribute="bottom" constant="10" id="2XT-J5-U3Z"/>
+                            <constraint firstAttribute="trailing" secondItem="X8s-Eb-iCi" secondAttribute="trailing" constant="20" id="4zg-im-iSA"/>
+                            <constraint firstItem="roz-Wr-Ex1" firstAttribute="top" secondItem="yDr-rT-Kk2" secondAttribute="bottom" constant="10" id="7y1-73-huf"/>
+                            <constraint firstItem="roz-Wr-Ex1" firstAttribute="leading" secondItem="4mn-0I-qu2" secondAttribute="leading" constant="20" id="Bd8-4a-5vI"/>
+                            <constraint firstAttribute="trailing" secondItem="lu8-iX-6gw" secondAttribute="trailing" constant="20" id="FKz-ec-yjj"/>
+                            <constraint firstAttribute="trailing" secondItem="roz-Wr-Ex1" secondAttribute="trailing" constant="20" id="J4Y-Ys-muw"/>
+                            <constraint firstItem="lu8-iX-6gw" firstAttribute="leading" secondItem="4mn-0I-qu2" secondAttribute="leading" constant="20" id="Kms-Nj-sx5"/>
+                            <constraint firstAttribute="trailing" secondItem="Zno-aG-A3l" secondAttribute="trailing" constant="20" id="LTC-2n-x7t"/>
+                            <constraint firstItem="EGn-7q-bHo" firstAttribute="leading" secondItem="4mn-0I-qu2" secondAttribute="leading" constant="20" id="M5u-bj-xAQ"/>
+                            <constraint firstItem="vOd-7K-BqQ" firstAttribute="leading" secondItem="4mn-0I-qu2" secondAttribute="leading" constant="20" id="N0R-lq-qA7"/>
+                            <constraint firstItem="Zno-aG-A3l" firstAttribute="top" secondItem="EGn-7q-bHo" secondAttribute="bottom" constant="20" id="ROM-dn-9eG"/>
+                            <constraint firstItem="vOd-7K-BqQ" firstAttribute="top" secondItem="roz-Wr-Ex1" secondAttribute="bottom" constant="20" id="a3H-Px-VKm"/>
+                            <constraint firstAttribute="trailing" secondItem="m1W-Kp-TH2" secondAttribute="trailing" constant="20" id="eTG-0V-1Ed"/>
+                            <constraint firstAttribute="trailing" secondItem="vOd-7K-BqQ" secondAttribute="trailing" constant="20" id="fg9-eM-5Pb"/>
+                            <constraint firstItem="yDr-rT-Kk2" firstAttribute="leading" secondItem="4mn-0I-qu2" secondAttribute="leading" constant="20" id="hpl-o9-EkH"/>
+                            <constraint firstItem="X8s-Eb-iCi" firstAttribute="top" secondItem="m1W-Kp-TH2" secondAttribute="bottom" constant="10" id="hvG-s7-kOP"/>
+                            <constraint firstItem="EGn-7q-bHo" firstAttribute="top" secondItem="lu8-iX-6gw" secondAttribute="bottom" constant="10" id="k4d-JO-Sba"/>
+                            <constraint firstAttribute="trailing" secondItem="EGn-7q-bHo" secondAttribute="trailing" constant="20" id="lmY-e3-aqR"/>
+                            <constraint firstItem="m1W-Kp-TH2" firstAttribute="leading" secondItem="4mn-0I-qu2" secondAttribute="leading" constant="20" id="mfK-j2-JDq"/>
+                            <constraint firstItem="yDr-rT-Kk2" firstAttribute="top" secondItem="YD6-41-xqC" secondAttribute="bottom" constant="20" id="ohb-ac-D6M"/>
+                            <constraint firstItem="Zno-aG-A3l" firstAttribute="leading" secondItem="4mn-0I-qu2" secondAttribute="leading" constant="20" id="plK-5s-raM"/>
+                            <constraint firstItem="X8s-Eb-iCi" firstAttribute="leading" secondItem="4mn-0I-qu2" secondAttribute="leading" constant="20" id="qn7-re-qNt"/>
+                            <constraint firstItem="YD6-41-xqC" firstAttribute="centerX" secondItem="4mn-0I-qu2" secondAttribute="centerX" id="r7i-Dm-tix"/>
+                            <constraint firstItem="lu8-iX-6gw" firstAttribute="top" secondItem="X8s-Eb-iCi" secondAttribute="bottom" constant="20" id="thp-pB-Lpg"/>
+                            <constraint firstAttribute="trailing" secondItem="yDr-rT-Kk2" secondAttribute="trailing" constant="20" id="txp-W7-QOI"/>
+                            <constraint firstItem="m1W-Kp-TH2" firstAttribute="top" secondItem="IHT-2r-lKa" secondAttribute="bottom" constant="25" id="xa5-yl-XAN"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="ejv-Bm-WyT" id="uvR-gr-0Ri"/>
+                        <outlet property="saveButton" destination="vOd-7K-BqQ" id="rUV-Bm-Ge4"/>
+                        <outlet property="segmentController" destination="YD6-41-xqC" id="06S-iz-h8L"/>
+                        <outlet property="textFieldForNameRoom" destination="X8s-Eb-iCi" id="vxE-ky-wH8"/>
+                        <outlet property="textFieldForPassword" destination="roz-Wr-Ex1" id="Xum-Zh-Bvg"/>
+                        <outlet property="textFieldForTypeRoom" destination="EGn-7q-bHo" id="EQy-kD-ndn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ye7-SX-fWq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121" y="91"/>
+            <point key="canvasLocation" x="120.8" y="90.404797601199405"/>
         </scene>
     </scenes>
 </document>
