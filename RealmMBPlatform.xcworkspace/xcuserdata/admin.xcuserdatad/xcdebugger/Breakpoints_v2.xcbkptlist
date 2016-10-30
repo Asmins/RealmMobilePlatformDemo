@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RealmMBPlatform/Module/CreateRooms/Interactor/CreateRoomInteractor.swift"
-            timestampString = "499291238.083342"
+            filePath = "RealmMBPlatform/Module/Rooms/Interactor/RoomsInteractor.swift"
+            timestampString = "499537130.446709"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "addRoom(room:)"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "synchronizeData(userName:password:tableView:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,14 +25,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RealmMBPlatform/Module/CreateRooms/Presenter/CreateRoomPresenter.swift"
-            timestampString = "499291265.223724"
+            filePath = "RealmMBPlatform/Module/Rooms/Interactor/RoomsInteractor.swift"
+            timestampString = "499537409.030171"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "add(room:)"
-            landmarkType = "7">
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "updateList()"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

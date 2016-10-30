@@ -14,7 +14,7 @@ class Message: Object {
     dynamic var user = ""
 }
 
-class Rooms: Object{
+class Rooms: Object {
     dynamic var nameRooms = ""
     dynamic var type = ""
     dynamic var access = ""

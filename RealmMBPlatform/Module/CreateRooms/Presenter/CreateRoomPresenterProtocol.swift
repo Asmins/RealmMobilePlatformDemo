@@ -9,5 +9,6 @@
 import UIKit
 
 protocol CreateRoomPresenterProtocol {
-    func add(room:Room)
+    func synchronizeData(userName:String,password:String)
+    func checkToEmpty(name:String,type:String,value:Int,password:String)
 }

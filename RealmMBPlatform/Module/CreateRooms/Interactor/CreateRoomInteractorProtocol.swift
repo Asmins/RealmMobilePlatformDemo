@@ -9,5 +9,7 @@
 import UIKit
 
 protocol CreateRoomInteractorProtocol {
-    func addRoom(room:Room)
+    func add(name:String,type:String,password:String)
+    func checkToEmpty(name:String,type:String,value:Int,password:String)
+    func synchronizeData(userName:String,password:String)
 }

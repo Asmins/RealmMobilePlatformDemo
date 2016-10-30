@@ -10,6 +10,7 @@ import UIKit
 
 class RoomsCell: UITableViewCell {
 
+    @IBOutlet var typeRoomLabel: UILabel!
     @IBOutlet var countLabel: UILabel!
     @IBOutlet var nameRoomsLabel: UILabel!
     @IBOutlet var imageRooms: UIImageView!
@@ -23,5 +24,11 @@ class RoomsCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func config(name:String,type:String,count:Int) {
+        nameRoomsLabel.text = name
+        typeRoomLabel.text = type
+     //   countLabel.text = "\(count)"
     }
 }

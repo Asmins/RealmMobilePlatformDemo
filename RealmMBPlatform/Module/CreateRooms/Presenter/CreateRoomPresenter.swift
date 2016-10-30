@@ -12,7 +12,11 @@ class CreateRoomPresenter {
     var interactor:CreateRoomInteractor?
 }
 extension CreateRoomPresenter: CreateRoomPresenterProtocol {
-    func add(room: Room) {
-        self.interactor?.addRoom(room: room)
+    func checkToEmpty(name: String, type: String, value: Int, password: String) {
+        self.interactor?.checkToEmpty(name: name, type: type, value: value, password: password)
+    }
+    
+    func synchronizeData(userName: String, password: String) {
+        self.interactor?.synchronizeData(userName: userName, password: password)
     }
 }

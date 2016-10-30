@@ -9,5 +9,5 @@
 import UIKit
 
 protocol RoomsWireframeProtocol {
-    func showCreateView()
+    func showCreateView(userName:String,password:String)
 }

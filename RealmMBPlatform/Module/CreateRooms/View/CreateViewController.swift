@@ -20,10 +20,13 @@ class CreateViewController: UIViewController {
     
     var presenter: CreateRoomPresenter?
     var disposeBag = DisposeBag()
+    var userName:String?
+    var password:String?
     var someVar = Variable<Int>(0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.presenter?.synchronizeData(userName: userName!, password: password!)
         self.title = "Create room"
         segmentController.rx.value.bindTo(someVar).addDisposableTo(disposeBag)
         
@@ -31,12 +34,18 @@ class CreateViewController: UIViewController {
             if value == 1 {
                 self.textFieldForPassword.isEnabled = false
                 self.textFieldForPassword.placeholder = "Only for private room"
+                self.textFieldForPassword.text = ""
+            }else{
+                self.textFieldForPassword.isEnabled = true
+                self.textFieldForPassword.placeholder = "Enter password"
+                self.textFieldForPassword.text = ""
             }
         }).addDisposableTo(disposeBag)
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func saveButtonAction(_ sender: AnyObject) {
-          print("Save")
+        self.presenter?.checkToEmpty(name: textFieldForNameRoom.text!, type: textFieldForTypeRoom.text!, value:     segmentController.selectedSegmentIndex, password: textFieldForPassword.text!)
     }
+    
 }

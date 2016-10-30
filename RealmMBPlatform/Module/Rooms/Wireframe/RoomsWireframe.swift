@@ -13,10 +13,12 @@ class RoomsWireframe {
 }
 
 extension RoomsWireframe: RoomsWireframeProtocol {
-    func showCreateView() {
+    func showCreateView(userName:String,password:String) {
         let createViewController = UIStoryboard(name: "Create", bundle: nil).instantiateViewController(withIdentifier: "CreateViewController") as! CreateViewController
         createViewController.presenter = CreateRoomPresenter()
         createViewController.presenter?.interactor = CreateRoomInteractor()
+        createViewController.userName = userName
+        createViewController.password = password
         roomViewController?.navigationController?.pushViewController(createViewController, animated: true)
     }
 }

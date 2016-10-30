@@ -45,7 +45,10 @@ extension LoginWireframe: LoginWireframeProtocol {
         roomsViewController.navigation?.roomViewController = roomsViewController
         roomsViewController.presenter = RoomsPresenter()
         roomsViewController.presenter?.interactor = RoomsInteractor()
+        roomsViewController.userName = userName
+        roomsViewController.password = password
         loginViewController?.navigationController?.pushViewController(roomsViewController, animated: true)
+        
     }
     
     func showRegistrView() {

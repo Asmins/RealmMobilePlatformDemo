@@ -73,7 +73,6 @@ extension MainInteractor: MainInteractorProtocol {
     func synchronizeData(userName: String, password: String,tableView:UITableView) {
         let url = URL(string: "http://127.0.0.1:9080")
         print(Realm.Configuration.defaultConfiguration.fileURL)
-        
         username = userName
         SyncUser.authenticate(with: Credential.usernamePassword(username: userName, password: password, actions: []), server: url!, onCompletion: { user,error in
             let user = user
