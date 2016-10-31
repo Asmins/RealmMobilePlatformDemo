@@ -24,4 +24,11 @@ extension RoomsPresenter: RoomsPresenterProtocol {
     func numberOfItem() -> Int {
         return (self.interactor?.rooms.count)!
     }
+    
+    func access(indexPath:NSIndexPath,firstAction:()->(),secondAction:()->()) {
+       self.interactor?.access(indexPath: indexPath, firstAction: firstAction, secondAction: secondAction)
+    }
+    func checkPassword(password:String,indexPath:NSIndexPath,action:()->()) {
+        self.interactor?.checkPassword(password: password, indexPath: indexPath, action: action)
+    }
 }

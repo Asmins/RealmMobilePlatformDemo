@@ -17,8 +17,7 @@ extension LoginInteractor: LoginInteractorProtocol  {
     
     func checkText(userName: UITextField, password: UITextField,action:() -> ()) -> Bool{
         if (userName.text != nil) && password.text == "" {
-            print("Nil")
-            return true
+             return true
         }else{
             action()
             return false

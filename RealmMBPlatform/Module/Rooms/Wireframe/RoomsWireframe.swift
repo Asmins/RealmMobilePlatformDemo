@@ -22,6 +22,7 @@ extension RoomsWireframe: RoomsWireframeProtocol {
         createViewController.password = password
         roomViewController?.navigationController?.pushViewController(createViewController, animated: true)
     }
+    
     func showMainView(userName: String, password: String, idRoom: String) {
         let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
         mainViewController.userName = userName
@@ -30,5 +31,9 @@ extension RoomsWireframe: RoomsWireframeProtocol {
         mainViewController.presenter = MainPresenter()
         mainViewController.presenter?.interactor = MainInteractor()
         roomViewController?.navigationController?.pushViewController(mainViewController, animated: true)
+    }
+    
+    func popView(viewController: UIViewController) {
+        viewController.navigationController?.popViewController(animated: true)
     }
 }

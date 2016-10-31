@@ -11,6 +11,6 @@ import UIKit
 protocol CreateRoomInteractorProtocol {
     func access(segmentController:UISegmentedControl,textField:UITextField)
     func add(name: String, type: String, password: String)
-    func checkToEmpty(name:String,type:String,value:Int,password:String)
+    func checkToEmpty(name:String,type:String,value:Int,password:String,action:()->())
     func synchronizeData(userName:String,password:String)
 }

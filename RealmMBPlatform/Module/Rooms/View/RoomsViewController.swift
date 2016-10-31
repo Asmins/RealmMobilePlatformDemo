@@ -7,11 +7,12 @@
 //
 import RealmSwift
 import UIKit
+import SCLAlertView
 
 class RoomsViewController: UIViewController {
-
+    
     var navigation: RoomsWireframe?
-
+    
     @IBOutlet var tableView: UITableView!
     var presenter: RoomsPresenter?
     var text = "test"
@@ -20,17 +21,10 @@ class RoomsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(Realm.Configuration.defaultConfiguration.fileURL)
         self.setupTableView(tableView:tableView)
-        title = "Rooms"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add))
+        self.setupUI()
         self.presenter?.syncData(userName: userName!, password: password!, tableView: tableView)
-        
         // Do any additional setup after loading the view.
-    }
-    
-    func add(){
-        self.navigation?.showCreateView(userName: userName!, password: password!)
     }
 }
 
@@ -53,7 +47,18 @@ extension RoomsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! RoomsCell
-        self.navigation?.showMainView(userName: userName!, password: password!, idRoom: cell.id)
+        self.presenter?.access(indexPath: indexPath as NSIndexPath, firstAction: {
+            let alert = SCLAlertView()
+            let textField = alert.addTextField("Enter password")
+            alert.addButton("Enter", action: {
+                self.presenter?.checkPassword(password: textField.text!, indexPath: indexPath as NSIndexPath, action: {
+                    self.navigation?.showMainView(userName: self.userName!, password: self.password!, idRoom: cell.id)
+                })
+            })
+            alert.showSuccess("Private Room", subTitle: "This room is private. If you want connect to this room,you must enter password")
+            }, secondAction: {
+                self.navigation?.showMainView(userName: userName!, password: password!, idRoom: cell.id)
+        })
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
@@ -61,5 +66,19 @@ extension RoomsViewController: UITableViewDelegate {
 extension RoomsViewController {
     func setupTableView(tableView:UITableView) {
         tableView.register(UINib(nibName:"RoomsCell",bundle:nil), forCellReuseIdentifier: "RoomsCell")
+    }
+    
+    func setupUI() {
+        title = "Rooms"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Log out", style: .bordered, target: self, action: #selector(back))
+    }
+    
+    func add(){
+        self.navigation?.showCreateView(userName: userName!, password: password!)
+    }
+    
+    func back(){
+        self.navigation?.popView(viewController: self)
     }
 }

@@ -9,6 +9,7 @@
 import UIKit
 
 protocol RoomsWireframeProtocol {
+    func popView(viewController:UIViewController)
     func showCreateView(userName:String,password:String)
     func showMainView(userName:String,password:String,idRoom:String)
 }

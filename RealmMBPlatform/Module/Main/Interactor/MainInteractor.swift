@@ -28,7 +28,7 @@ class MainInteractor {
         textField.rx.text.bindTo(textVariavble).addDisposableTo(disposeBag)
         
         textVariavble.asObservable().throttle(0.1, scheduler: MainScheduler.instance).subscribe(onNext: { text in
-            print(text!)
+            
             if text?.isEmpty == false{
                 if self.bool == false{
                     try! self.realm.write {
@@ -71,15 +71,10 @@ extension MainInteractor: MainInteractorProtocol {
     
     func synchronizeData(userName: String, password: String,tableView:UITableView,id:String) {
         let url = URL(string: "http://127.0.0.1:9080")
-        print(Realm.Configuration.defaultConfiguration.fileURL)
         username = userName
         SyncUser.authenticate(with: Credential.usernamePassword(username: userName, password: password, actions: []), server: url!, onCompletion: { user,error in
             let user = user
-            
-            if user == nil {
-                fatalError(String(describing: error))
-            }
-            
+          
             let configuration = Realm.Configuration(
                 syncConfiguration: (user!, URL(string: "realm://127.0.0.1:9080/\(id)/messages")!)
             )

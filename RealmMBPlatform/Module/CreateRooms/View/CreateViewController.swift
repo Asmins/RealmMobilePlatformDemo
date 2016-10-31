@@ -31,8 +31,9 @@ class CreateViewController: UIViewController {
     }
     
     @IBAction func saveButtonAction(_ sender: AnyObject) {
-        self.presenter?.checkToEmpty(name: textFieldForNameRoom.text!, type: textFieldForTypeRoom.text!, value:     segmentController.selectedSegmentIndex, password: textFieldForPassword.text!)
-        self.navigation?.dismiss(viewController: self)
+        self.presenter?.checkToEmpty(name: textFieldForNameRoom.text!, type: textFieldForTypeRoom.text!, value: segmentController.selectedSegmentIndex, password: textFieldForPassword.text!,action: {
+            self.navigation?.dismiss(viewController: self)
+        })
     }
     
 }

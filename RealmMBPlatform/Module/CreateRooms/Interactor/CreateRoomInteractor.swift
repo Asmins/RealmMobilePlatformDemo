@@ -10,6 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 import RealmSwift
+import SCLAlertView
 
 class CreateRoomInteractor {
     var segmentControllerVariable = Variable<Int>(0)
@@ -17,6 +18,7 @@ class CreateRoomInteractor {
     var realm:Realm!
     var disposeBag = DisposeBag()
     let uuid = NSUUID().uuidString.lowercased()
+    let alert = SCLAlertView()
 }
 extension CreateRoomInteractor: CreateRoomInteractorProtocol {
     
@@ -26,7 +28,7 @@ extension CreateRoomInteractor: CreateRoomInteractorProtocol {
             let user = user
            
             if user == nil {
-                fatalError(String(describing: error))
+                print("User does not found")
             }
             
             let configuration = Realm.Configuration(
@@ -64,22 +66,21 @@ extension CreateRoomInteractor: CreateRoomInteractorProtocol {
         }
     }
     
-    func checkToEmpty(name: String, type: String, value: Int, password: String) {
+    func checkToEmpty(name:String,type:String,value:Int,password:String,action:()->()) {
         if name.isEmpty == false && type.isEmpty == false {
-            //Chect private or publick
             if value == 0 {
                 if password != "" {
                     self.add(name: name, type: type, password: password)
+                    action()
                 }else{
-                    print("Enter password")
+                    alert.showError("Error", subTitle: "Enter password")
                 }
             }else{
                 self.add(name: name, type: type, password: "0")
-                print("Save")
+                action()
             }
         }else{
-            print("Not save")
-            print("Enter all fields")
+            alert.showError("Not save", subTitle: "Enter all fields")
         }
     }
 }

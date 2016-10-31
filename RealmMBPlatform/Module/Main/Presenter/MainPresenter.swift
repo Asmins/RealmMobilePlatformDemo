@@ -13,7 +13,6 @@ class MainPresenter {
     
     func some(textField:UITextField){
         self.interactor?.some(textField: textField)
-        
     }
 }
 

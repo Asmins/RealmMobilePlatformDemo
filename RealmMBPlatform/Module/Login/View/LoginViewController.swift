@@ -29,10 +29,11 @@ class LoginViewController: UIViewController {
     @IBAction func registerButton(_ sender: AnyObject) {
         self.navigation?.showRegistrView()
     }
-
+/*
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         textFieldForEmail.text = ""
         textFieldForPassword.text = ""
     }
+ */
 }

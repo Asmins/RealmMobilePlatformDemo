@@ -10,5 +10,6 @@ import UIKit
 
 protocol RoomsInteractorProtocol {
     func synchronizeData(userName:String,password:String,tableView:UITableView)
-    func access()
+    func access(indexPath:NSIndexPath,firstAction:()->(),secondAction:()->())
+    func checkPassword(password:String,indexPath:NSIndexPath,action:()->())
 }

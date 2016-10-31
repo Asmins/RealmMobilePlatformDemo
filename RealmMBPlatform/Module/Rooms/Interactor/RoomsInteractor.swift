@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCLAlertView
 import RealmSwift
 
 class RoomsInteractor {
@@ -21,28 +22,38 @@ extension RoomsInteractor: RoomsInteractorProtocol {
         let url = URL(string: "http://127.0.0.1:9080")
         username = userName
         SyncUser.authenticate(with: Credential.usernamePassword(username: userName, password: password, actions: []), server: url!, onCompletion: { user,error in
-            let user = user
             
             if user == nil {
-                fatalError(String(describing: error))
-            }
-            
-            let configuration = Realm.Configuration(
-                syncConfiguration: (user!, URL(string: "realm://127.0.0.1:9080/all/rooms")!)
-            )
-            
-            self.realm = try! Realm(configuration: configuration)
-            
-            func updateList() {
-                print(self.realm.objects(Rooms))
-                self.rooms = Array(self.realm.objects(Rooms.self))
-                tableView.reloadData()
-            }
-            updateList()
-            self.notificationToken = self.realm.addNotificationBlock { _ in
+                let alert = SCLAlertView()
+                alert.showError("Error", subTitle: "User not found")
+            }else{
+                let configuration = Realm.Configuration(syncConfiguration: (user!, URL(string: "realm://127.0.0.1:9080/all/rooms")!)
+                )
+                self.realm = try! Realm(configuration: configuration)
+              
+                func updateList() {
+                    self.rooms = Array(self.realm.objects(Rooms.self))
+                    tableView.reloadData()
+                }
                 updateList()
+                self.notificationToken = self.realm.addNotificationBlock { _ in
+                    updateList()
+                }
             }
         })
+    }
 
+    func access(indexPath:NSIndexPath,firstAction:()->(),secondAction:()->()) {
+        if rooms[indexPath.row].type == "Private" {
+            firstAction()
+        }else{
+            secondAction()
+        }
+    }
+    
+    func checkPassword(password:String,indexPath:NSIndexPath,action:()->()){
+        if password == self.rooms[indexPath.row].password {
+            action()
+        }
     }
 }
