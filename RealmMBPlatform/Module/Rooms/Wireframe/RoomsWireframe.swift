@@ -15,10 +15,20 @@ class RoomsWireframe {
 extension RoomsWireframe: RoomsWireframeProtocol {
     func showCreateView(userName:String,password:String) {
         let createViewController = UIStoryboard(name: "Create", bundle: nil).instantiateViewController(withIdentifier: "CreateViewController") as! CreateViewController
+        createViewController.navigation = CreateRoomWireframe()
         createViewController.presenter = CreateRoomPresenter()
         createViewController.presenter?.interactor = CreateRoomInteractor()
         createViewController.userName = userName
         createViewController.password = password
         roomViewController?.navigationController?.pushViewController(createViewController, animated: true)
+    }
+    func showMainView(userName: String, password: String, idRoom: String) {
+        let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+        mainViewController.userName = userName
+        mainViewController.password = password
+        mainViewController.idRoom = idRoom
+        mainViewController.presenter = MainPresenter()
+        mainViewController.presenter?.interactor = MainInteractor()
+        roomViewController?.navigationController?.pushViewController(mainViewController, animated: true)
     }
 }

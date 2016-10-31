@@ -25,6 +25,7 @@ class RoomsViewController: UIViewController {
         title = "Rooms"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add))
         self.presenter?.syncData(userName: userName!, password: password!, tableView: tableView)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -47,7 +48,13 @@ extension RoomsViewController: UITableViewDataSource {
 
 extension RoomsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(200)
+        return CGFloat(100)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! RoomsCell
+        self.navigation?.showMainView(userName: userName!, password: password!, idRoom: cell.id)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

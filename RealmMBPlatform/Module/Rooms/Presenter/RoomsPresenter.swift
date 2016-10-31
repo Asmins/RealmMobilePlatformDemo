@@ -18,8 +18,7 @@ extension RoomsPresenter: RoomsPresenterProtocol {
     }
     
     func setupCell(cell:RoomsCell,indexPath:NSIndexPath){
-       // cell.config(name: (self.interactor?.rooms[indexPath.row].nameRooms)!, count: (self.interactor?.rooms.count)!)
-        cell.config(name: (self.interactor?.rooms[indexPath.row].nameRooms)!, type: (self.interactor?.rooms[indexPath.row].type)!, count:0)
+        cell.config(name: (self.interactor?.rooms[indexPath.row].nameRooms)!, type: (self.interactor?.rooms[indexPath.row].type)!, count:0,id: (self.interactor?.rooms[indexPath.row].roomID)!)
     }
 
     func numberOfItem() -> Int {

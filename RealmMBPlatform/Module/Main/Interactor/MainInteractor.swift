@@ -37,7 +37,6 @@ class MainInteractor {
                     self.bool = true
                 }else{
                     let message = self.realm.objects(Message.self).last
-                    print(message)
                     try! self.realm.write {
                         message?.textMessage = text!
                     }
@@ -70,7 +69,7 @@ extension MainInteractor: MainInteractorProtocol {
         textField.text = ""
     }
     
-    func synchronizeData(userName: String, password: String,tableView:UITableView) {
+    func synchronizeData(userName: String, password: String,tableView:UITableView,id:String) {
         let url = URL(string: "http://127.0.0.1:9080")
         print(Realm.Configuration.defaultConfiguration.fileURL)
         username = userName
@@ -82,13 +81,12 @@ extension MainInteractor: MainInteractorProtocol {
             }
             
             let configuration = Realm.Configuration(
-                syncConfiguration: (user!, URL(string: "realm://127.0.0.1:9080/all/messages")!)
+                syncConfiguration: (user!, URL(string: "realm://127.0.0.1:9080/\(id)/messages")!)
             )
             
             self.realm = try! Realm(configuration: configuration)
             
             func updateList() {
-                
                 self.message = Array(self.realm.objects(Message.self))
                 tableView.reloadData()
             }
@@ -98,4 +96,5 @@ extension MainInteractor: MainInteractorProtocol {
             }
         })
     }
+    
 }

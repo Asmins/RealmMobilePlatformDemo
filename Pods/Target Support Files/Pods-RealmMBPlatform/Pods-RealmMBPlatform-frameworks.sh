@@ -88,10 +88,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-RealmMBPlatform/RealmSwift.framework"
   install_framework "Pods-RealmMBPlatform/RxCocoa.framework"
   install_framework "Pods-RealmMBPlatform/RxSwift.framework"
+  install_framework "Pods-RealmMBPlatform/SCLAlertView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-RealmMBPlatform/Realm.framework"
   install_framework "Pods-RealmMBPlatform/RealmSwift.framework"
   install_framework "Pods-RealmMBPlatform/RxCocoa.framework"
   install_framework "Pods-RealmMBPlatform/RxSwift.framework"
+  install_framework "Pods-RealmMBPlatform/SCLAlertView.framework"
 fi

@@ -10,4 +10,5 @@ import UIKit
 
 protocol RoomsWireframeProtocol {
     func showCreateView(userName:String,password:String)
+    func showMainView(userName:String,password:String,idRoom:String)
 }

@@ -19,4 +19,7 @@ extension CreateRoomPresenter: CreateRoomPresenterProtocol {
     func synchronizeData(userName: String, password: String) {
         self.interactor?.synchronizeData(userName: userName, password: password)
     }
+    func access(segmentController: UISegmentedControl, textField: UITextField) {
+        self.interactor?.access(segmentController: segmentController, textField: textField)
+    }
 }

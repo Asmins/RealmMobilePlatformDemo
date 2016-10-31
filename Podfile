@@ -7,6 +7,7 @@ target 'RealmMBPlatform' do
 	pod ‘RealmSwift’
     pod 'RxSwift',    '~> 3.0'
     pod 'RxCocoa',    '~> 3.0'
+    pod 'SCLAlertView'
 end
 
 post_install do |installer|

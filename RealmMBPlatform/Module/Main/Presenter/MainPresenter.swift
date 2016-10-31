@@ -27,8 +27,8 @@ extension MainPresenter: MainPresenterProtocol {
         self.interactor?.clean(textField: textField)
     }
     
-    func syncData(userName: String, password: String, tableView: UITableView) {
-        self.interactor?.synchronizeData(userName: userName, password: password, tableView: tableView)
+    func syncData(userName: String, password: String, tableView: UITableView,id:String) {
+        self.interactor?.synchronizeData(userName: userName, password: password, tableView: tableView, id: id)
     }
     
     func numberOfItem() -> Int {

@@ -15,16 +15,18 @@ class MainViewController: UIViewController {
     @IBOutlet var textField: UITextField!
     @IBOutlet var tableView: UITableView!
     
-    var presenter:MainPresenter?
-    var userName:String?
-    var password:String?
+    var presenter: MainPresenter?
+    
+    var userName: String?
+    var password: String?
+    var idRoom: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView(tableView: tableView)
-        self.presenter?.syncData(userName: userName!, password: password!, tableView: tableView)
+        self.presenter?.syncData(userName: userName!, password: password!, tableView: tableView,id: idRoom!)
         self.presenter?.some(textField: textField)
-        title = "My message"
+        title = "Messages"
     }
     
     @IBAction func sendMessageButton(_ sender: AnyObject) {

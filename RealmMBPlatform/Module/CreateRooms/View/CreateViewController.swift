@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import RxCocoa
-import RxSwift
 
 class CreateViewController: UIViewController {
     
@@ -19,33 +17,22 @@ class CreateViewController: UIViewController {
     @IBOutlet var textFieldForNameRoom: UITextField!
     
     var presenter: CreateRoomPresenter?
-    var disposeBag = DisposeBag()
+    var navigation: CreateRoomWireframe?
+    
     var userName:String?
     var password:String?
-    var someVar = Variable<Int>(0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter?.synchronizeData(userName: userName!, password: password!)
         self.title = "Create room"
-        segmentController.rx.value.bindTo(someVar).addDisposableTo(disposeBag)
-        
-        someVar.asObservable().subscribe(onNext: { value in
-            if value == 1 {
-                self.textFieldForPassword.isEnabled = false
-                self.textFieldForPassword.placeholder = "Only for private room"
-                self.textFieldForPassword.text = ""
-            }else{
-                self.textFieldForPassword.isEnabled = true
-                self.textFieldForPassword.placeholder = "Enter password"
-                self.textFieldForPassword.text = ""
-            }
-        }).addDisposableTo(disposeBag)
+        self.presenter?.access(segmentController: segmentController, textField: textFieldForPassword)
         // Do any additional setup after loading the view.
     }
     
     @IBAction func saveButtonAction(_ sender: AnyObject) {
         self.presenter?.checkToEmpty(name: textFieldForNameRoom.text!, type: textFieldForTypeRoom.text!, value:     segmentController.selectedSegmentIndex, password: textFieldForPassword.text!)
+        self.navigation?.dismiss(viewController: self)
     }
     
 }

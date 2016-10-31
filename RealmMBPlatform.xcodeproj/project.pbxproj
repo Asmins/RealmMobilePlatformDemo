@@ -52,6 +52,8 @@
 		84CFBF7A1DBE33B3007B844A /* MainInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFBF791DBE33B3007B844A /* MainInteractorProtocol.swift */; };
 		84CFBF7C1DBE33EF007B844A /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFBF7B1DBE33EF007B844A /* MainPresenter.swift */; };
 		84CFBF7E1DBE3402007B844A /* MainPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFBF7D1DBE3402007B844A /* MainPresenterProtocol.swift */; };
+		84DBA0F91DC72AF100240F38 /* CreateRoomWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBA0F81DC72AF100240F38 /* CreateRoomWireframe.swift */; };
+		84DBA0FB1DC72B0200240F38 /* CreateRoomWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBA0FA1DC72B0200240F38 /* CreateRoomWireframeProtocol.swift */; };
 		84F045A41DC22FA8009C2EF3 /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F045A31DC22FA8009C2EF3 /* Create.storyboard */; };
 		84F045A61DC23035009C2EF3 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F045A51DC23035009C2EF3 /* CreateViewController.swift */; };
 		84F045A91DC230E6009C2EF3 /* CreateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F045A81DC230E6009C2EF3 /* CreateCell.xib */; };
@@ -130,6 +132,8 @@
 		84CFBF791DBE33B3007B844A /* MainInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInteractorProtocol.swift; sourceTree = "<group>"; };
 		84CFBF7B1DBE33EF007B844A /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		84CFBF7D1DBE3402007B844A /* MainPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenterProtocol.swift; sourceTree = "<group>"; };
+		84DBA0F81DC72AF100240F38 /* CreateRoomWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRoomWireframe.swift; sourceTree = "<group>"; };
+		84DBA0FA1DC72B0200240F38 /* CreateRoomWireframeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRoomWireframeProtocol.swift; sourceTree = "<group>"; };
 		84F045A31DC22FA8009C2EF3 /* Create.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
 		84F045A51DC23035009C2EF3 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		84F045A81DC230E6009C2EF3 /* CreateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateCell.xib; sourceTree = "<group>"; };
@@ -485,6 +489,8 @@
 		84F045A21DC22F97009C2EF3 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
+				84DBA0F81DC72AF100240F38 /* CreateRoomWireframe.swift */,
+				84DBA0FA1DC72B0200240F38 /* CreateRoomWireframeProtocol.swift */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -666,11 +672,13 @@
 				84CFBF6E1DBE2714007B844A /* LoginPresenterProtocol.swift in Sources */,
 				84431F371DBE0A8C00FEA46E /* LoginWireframeProtocol.swift in Sources */,
 				84F216041DC28F9D00FD8595 /* Room.swift in Sources */,
+				84DBA0F91DC72AF100240F38 /* CreateRoomWireframe.swift in Sources */,
 				84431F331DBE0A0200FEA46E /* RootWireframe.swift in Sources */,
 				84CFBF761DBE2D03007B844A /* MainViewController.swift in Sources */,
 				84431F3B1DBE0DB500FEA46E /* LoginProtocol.swift in Sources */,
 				8455CB641DC1FCE1009CE511 /* RoomsInteractorProtocol.swift in Sources */,
 				84CFBF7E1DBE3402007B844A /* MainPresenterProtocol.swift in Sources */,
+				84DBA0FB1DC72B0200240F38 /* CreateRoomWireframeProtocol.swift in Sources */,
 				84CFBF6D1DBE2714007B844A /* LoginPresenter.swift in Sources */,
 				841D6B3E1DC292D3007A9B4A /* CreateRoomPresenter.swift in Sources */,
 				84F216021DC28F4200FD8595 /* CreateRoomInteractorProtocol.swift in Sources */,

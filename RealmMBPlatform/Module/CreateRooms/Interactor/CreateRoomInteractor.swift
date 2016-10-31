@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 import RealmSwift
 
 class CreateRoomInteractor {
+    var segmentControllerVariable = Variable<Int>(0)
     var rooms = [Rooms]()
-    var notificationToken: NotificationToken!
     var realm:Realm!
+    var disposeBag = DisposeBag()
+    let uuid = NSUUID().uuidString.lowercased()
 }
 extension CreateRoomInteractor: CreateRoomInteractorProtocol {
     
@@ -29,32 +33,33 @@ extension CreateRoomInteractor: CreateRoomInteractorProtocol {
                 syncConfiguration: (user!, URL(string: "realm://127.0.0.1:9080/all/rooms")!)
             )
             self.realm = try! Realm(configuration: configuration)
-            
-            func updateList() {
-                print(self.realm.objects(Rooms))
-        //        self.rooms = Array(self.realm.objects(Rooms.self))
-            }
-            updateList()
-            self.notificationToken = self.realm.addNotificationBlock { _ in
-                updateList()
-            }
         })
     }
     
-    func addRoom(room: Room) {
-        try! realm.write {
-            realm.add(Rooms(value: [room.nameRoom,room.type,room.acesses,room.password]))
-        }
+    func access(segmentController:UISegmentedControl,textField:UITextField){
+        segmentController.rx.value.bindTo(segmentControllerVariable).addDisposableTo(disposeBag)
+        segmentControllerVariable.asObservable().subscribe(onNext: { value in 
+            if value == 1 {
+                textField.isEnabled = false
+                textField.placeholder = "Only for private room"
+                textField.text = ""
+            }else{
+                textField.isEnabled = true
+                textField.placeholder = "Enter password"
+                textField.text = ""
+            }
+        }).addDisposableTo(disposeBag)
     }
+    
     
     func add(name: String, type: String, password: String) {
         if password == "" {
             try! realm.write {
-                realm.add(Rooms(value: [name,type,"publick","0"]))
+                realm.add(Rooms(value: [name,type,"0","\(uuid)"]))
             }
         }else{
             try! realm.write {
-                realm.add(Rooms(value: [name,type,"private",password]))
+                realm.add(Rooms(value: [name,type,password,"\(uuid)"]))
             }
         }
     }
