@@ -24,6 +24,7 @@ class RoomsViewController: UIViewController {
         self.setupTableView(tableView:tableView)
         self.setupUI()
         self.presenter?.syncData(userName: userName!, password: password!, tableView: tableView)
+        print(Realm.Configuration.defaultConfiguration.fileURL)
         // Do any additional setup after loading the view.
     }
 }

@@ -12,11 +12,9 @@ class RoomsCell: UITableViewCell {
 
     var id = ""
     
+    @IBOutlet var accessLabel: UILabel!
     @IBOutlet var typeRoomLabel: UILabel!
-    @IBOutlet var countLabel: UILabel!
     @IBOutlet var nameRoomsLabel: UILabel!
-    @IBOutlet var imageRooms: UIImageView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -28,9 +26,10 @@ class RoomsCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func config(name:String,type:String,count:Int,id:String) {
+    func config(name:String,type:String,access:String,id:String) {
         nameRoomsLabel.text = name
         typeRoomLabel.text = type
+        accessLabel.text = access
         self.id = id 
      //   countLabel.text = "\(count)"
     }

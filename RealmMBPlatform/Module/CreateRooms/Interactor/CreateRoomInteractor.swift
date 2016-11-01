@@ -54,14 +54,14 @@ extension CreateRoomInteractor: CreateRoomInteractorProtocol {
     }
     
     
-    func add(name: String, type: String, password: String) {
+    func add(name: String, type: String, password: String,access:String) {
         if password == "" {
             try! realm.write {
-                realm.add(Rooms(value: [name,type,"0","\(uuid)"]))
+                realm.add(Rooms(value: [name,type,access,"0","\(uuid)"]))
             }
         }else{
             try! realm.write {
-                realm.add(Rooms(value: [name,type,password,"\(uuid)"]))
+                realm.add(Rooms(value: [name,type,access,password,"\(uuid)"]))
             }
         }
     }
@@ -70,13 +70,13 @@ extension CreateRoomInteractor: CreateRoomInteractorProtocol {
         if name.isEmpty == false && type.isEmpty == false {
             if value == 0 {
                 if password != "" {
-                    self.add(name: name, type: type, password: password)
+                    self.add(name: name, type: type, password: password, access: "Private Room")
                     action()
                 }else{
                     alert.showError("Error", subTitle: "Enter password")
                 }
             }else{
-                self.add(name: name, type: type, password: "0")
+                self.add(name: name, type: type, password: "0",access: "Publick Room")
                 action()
             }
         }else{
