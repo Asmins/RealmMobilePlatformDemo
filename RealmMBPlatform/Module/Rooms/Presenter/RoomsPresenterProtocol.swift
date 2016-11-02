@@ -14,4 +14,5 @@ protocol RoomsPresenterProtocol {
     func numberOfItem() -> Int 
     func setupCell(cell:RoomsCell,indexPath:NSIndexPath)
     func syncData(userName: String, password: String, tableView: UITableView)
+    func setupNavController(navigationController:UINavigationController)
 }

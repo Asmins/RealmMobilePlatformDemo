@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import SwiftGifOrigin
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet var registerButton: UIButton!
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var textFieldForEmail: UITextField!
@@ -20,9 +22,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.presenter?.setupNavController(navController: navigationController!)
         self.setupUI()
     }
-    
+  
     @IBAction func loginButton(_ sender: AnyObject) {
         self.presenter?.checkTextField(userName: textFieldForEmail, password: textFieldForPassword, action: {
             self.navigation?.showMainView(userName: textFieldForEmail.text!, password: textFieldForPassword.text!)
@@ -43,13 +46,11 @@ class LoginViewController: UIViewController {
 
 
 extension LoginViewController {
+   
     func setupUI(){
         title = "Log In"
-        navigationController?.setNavigationBarHidden(false, animated: true)
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white,NSFontAttributeName: UIFont(name: "Bradley Hand", size: 24)!]
+        let gifImage = UIImage.gif(name: "loginScreenGif")
+        imageView.loadGif(name: "loginScreenGif")
         textFieldForEmail.layer.borderColor = UIColor.white.cgColor
         textFieldForPassword.layer.borderColor = UIColor.white.cgColor
         loginButton.layer.borderColor = UIColor.white.cgColor

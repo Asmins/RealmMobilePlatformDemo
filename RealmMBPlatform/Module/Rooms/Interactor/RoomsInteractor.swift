@@ -33,6 +33,7 @@ extension RoomsInteractor: RoomsInteractorProtocol {
               
                 func updateList() {
                     self.rooms = Array(self.realm.objects(Rooms.self))
+                    var message = Array(self.realm.objects(Message.self))
                     tableView.reloadData()
                 }
                 updateList()
@@ -44,7 +45,7 @@ extension RoomsInteractor: RoomsInteractorProtocol {
     }
 
     func access(indexPath:NSIndexPath,firstAction:()->(),secondAction:()->()) {
-        if rooms[indexPath.row].type == "Private" {
+        if rooms[indexPath.row].access == "Private" {
             firstAction()
         }else{
             secondAction()

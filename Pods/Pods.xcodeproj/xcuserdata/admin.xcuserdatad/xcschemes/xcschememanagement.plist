@@ -34,35 +34,45 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftGifOrigin.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>41A8B8B29E1DD840A63B0E670DC36E0B</key>
+		<key>35BB000B35DD0E0E61A79AAAB59A6E03</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5A35605BC7CDF858274D6554D73C759C</key>
+		<key>4D62AAB575F01FFD5F1774FFE6D8C6D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A02BE4BB0BDA91E35EE0FCB80B5CF560</key>
+		<key>72A3A1C838EA06301C84308F113FDAD8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A7F8E8B5C2AC2F1977727A0B8A3AFA4E</key>
+		<key>8E8C20C96F5F4790463ECE679BD743E2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CE9080E80AB7FAADEE53021C32ACD260</key>
+		<key>C2BBD8AF2F54D0A5F4592D5A6F1D4830</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F132C1B32F53531A430C20008FC48C2F</key>
+		<key>E7854710208C68A060DA5CE9671676DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F79465301EFAE8F628CF11F9DC084486</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2327e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -30,17 +30,18 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tFb-Xs-Wqa" secondAttribute="trailing" id="2Fz-0X-yNr"/>
                             <constraint firstItem="tFb-Xs-Wqa" firstAttribute="leading" secondItem="zYZ-Y1-017" secondAttribute="leading" id="PWx-5G-n2M"/>
+                            <constraint firstItem="tFb-Xs-Wqa" firstAttribute="top" secondItem="5nD-mv-bVY" secondAttribute="bottom" constant="-40" id="UW6-Wv-JSN"/>
                             <constraint firstItem="wvO-Go-GDV" firstAttribute="top" secondItem="tFb-Xs-Wqa" secondAttribute="bottom" id="u44-we-TnX"/>
-                            <constraint firstItem="tFb-Xs-Wqa" firstAttribute="top" secondItem="5nD-mv-bVY" secondAttribute="bottom" constant="-64" id="yan-a2-akC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="B4b-OY-ga5"/>
                     <connections>
                         <outlet property="tableView" destination="tFb-Xs-Wqa" id="neT-HZ-VyC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="InO-uh-xdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31" y="152"/>
+            <point key="canvasLocation" x="968.79999999999995" y="151.57421289355324"/>
         </scene>
     </scenes>
 </document>

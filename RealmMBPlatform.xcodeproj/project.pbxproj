@@ -42,6 +42,8 @@
 		846E64BB1DBDF42D0088D4D3 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846E64B81DBDF42D0088D4D3 /* RealmSwift.framework */; };
 		846E64BC1DBDF42D0088D4D3 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 846E64B81DBDF42D0088D4D3 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		846E64BF1DBDF7AB0088D4D3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E64BE1DBDF7AB0088D4D3 /* Model.swift */; };
+		849939F71DC8A6F1001BFA75 /* loginScreenGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 849939F61DC8A6F1001BFA75 /* loginScreenGif.gif */; };
+		849939FB1DC8C94C001BFA75 /* night.gif in Resources */ = {isa = PBXBuildFile; fileRef = 849939FA1DC8C94C001BFA75 /* night.gif */; };
 		84CFBF6D1DBE2714007B844A /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFBF6B1DBE2714007B844A /* LoginPresenter.swift */; };
 		84CFBF6E1DBE2714007B844A /* LoginPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFBF6C1DBE2714007B844A /* LoginPresenterProtocol.swift */; };
 		84CFBF711DBE2749007B844A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CFBF6F1DBE2749007B844A /* Login.storyboard */; };
@@ -122,6 +124,8 @@
 		846E64B71DBDF42D0088D4D3 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		846E64B81DBDF42D0088D4D3 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		846E64BE1DBDF7AB0088D4D3 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		849939F61DC8A6F1001BFA75 /* loginScreenGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loginScreenGif.gif; sourceTree = "<group>"; };
+		849939FA1DC8C94C001BFA75 /* night.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = night.gif; sourceTree = "<group>"; };
 		84CFBF6B1DBE2714007B844A /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		84CFBF6C1DBE2714007B844A /* LoginPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocol.swift; sourceTree = "<group>"; };
 		84CFBF6F1DBE2749007B844A /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -411,6 +415,7 @@
 		846E649E1DBDF0B60088D4D3 /* RealmMBPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				849939F51DC8A6DB001BFA75 /* Image */,
 				84F215F51DC2882000FD8595 /* HeaderView */,
 				840582821DC0C783003B3E84 /* TableViewCell */,
 				846E64C01DBDFE4A0088D4D3 /* Module */,
@@ -445,6 +450,15 @@
 				84431F221DBE084700FEA46E /* Login */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		849939F51DC8A6DB001BFA75 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				849939FA1DC8C94C001BFA75 /* night.gif */,
+				849939F61DC8A6F1001BFA75 /* loginScreenGif.gif */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		84F0459E1DC22F5A009C2EF3 /* CreateRoom */ = {
@@ -599,6 +613,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849939F71DC8A6F1001BFA75 /* loginScreenGif.gif in Resources */,
+				849939FB1DC8C94C001BFA75 /* night.gif in Resources */,
 				841356A81DC08750005C1565 /* Registration.storyboard in Resources */,
 				84F045A91DC230E6009C2EF3 /* CreateCell.xib in Resources */,
 				84F045A41DC22FA8009C2EF3 /* Create.storyboard in Resources */,

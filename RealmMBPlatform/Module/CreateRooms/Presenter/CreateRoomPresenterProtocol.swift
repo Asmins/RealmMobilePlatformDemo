@@ -12,4 +12,5 @@ protocol CreateRoomPresenterProtocol {
     func access(segmentController:UISegmentedControl,textField:UITextField)
     func synchronizeData(userName:String,password:String)
     func checkToEmpty(name:String,type:String,value:Int,password:String,action:()->())
+    func setupNavigationController(navController:UINavigationController)
 }

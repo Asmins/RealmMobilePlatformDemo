@@ -18,10 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginScreen" translatesAutoresizingMaskIntoConstraints="NO" id="ryy-V2-Z8V">
-                                <frame key="frameInset" minY="-4" width="375" height="674"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ryy-V2-Z8V"/>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hf6-FL-6Ue">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login or Create Your New Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1q-OO-xMY">
@@ -32,6 +29,9 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uhr-oA-5ot">
                                         <color key="backgroundColor" red="0.78626289373727021" green="0.78626289373727021" blue="0.78626289373727021" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ldc-Eq-d40"/>
+                                        </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -50,6 +50,9 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Vq-Zi-AGG">
                                         <color key="backgroundColor" red="0.78626289370000002" green="0.78626289370000002" blue="0.78626289370000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="HuA-hn-esq"/>
+                                        </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -109,7 +112,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.033577696917808222" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.29572452910958902" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="0JK-Y5-4Vf" firstAttribute="leading" secondItem="Hf6-FL-6Ue" secondAttribute="leading" constant="20" id="0Vt-qH-SBg"/>
                                     <constraint firstAttribute="trailing" secondItem="uhr-oA-5ot" secondAttribute="trailing" constant="20" id="0lX-uZ-yi2"/>
@@ -134,14 +137,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ryy-V2-Z8V" firstAttribute="leading" secondItem="sWB-FA-DM0" secondAttribute="leading" id="0jG-tq-2tU"/>
+                            <constraint firstItem="Hf6-FL-6Ue" firstAttribute="top" secondItem="sWB-FA-DM0" secondAttribute="top" id="17l-cd-gZQ"/>
                             <constraint firstItem="Ps2-al-kbb" firstAttribute="top" secondItem="Hf6-FL-6Ue" secondAttribute="bottom" id="17m-aq-lo3"/>
                             <constraint firstItem="Hf6-FL-6Ue" firstAttribute="leading" secondItem="sWB-FA-DM0" secondAttribute="leading" id="IFV-vs-eh4"/>
+                            <constraint firstAttribute="trailing" secondItem="ryy-V2-Z8V" secondAttribute="trailing" id="lro-Z5-Mj1"/>
                             <constraint firstAttribute="trailing" secondItem="Hf6-FL-6Ue" secondAttribute="trailing" id="pjB-da-QMJ"/>
-                            <constraint firstItem="Hf6-FL-6Ue" firstAttribute="top" secondItem="sWB-FA-DM0" secondAttribute="top" id="rKE-Mr-mP0"/>
+                            <constraint firstItem="Ps2-al-kbb" firstAttribute="top" secondItem="ryy-V2-Z8V" secondAttribute="bottom" id="vRY-B0-jhP"/>
+                            <constraint firstItem="ryy-V2-Z8V" firstAttribute="top" secondItem="sWB-FA-DM0" secondAttribute="top" id="z9z-MV-ypa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Log In" id="n85-rH-dDd"/>
+                    <navigationItem key="navigationItem" title="Log In" id="n85-rH-dDd">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="7kj-MU-d1F"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="imageView" destination="ryy-V2-Z8V" id="dS8-IV-jju"/>
                         <outlet property="loginButton" destination="UIG-ro-Mx3" id="uwc-uE-b1p"/>
                         <outlet property="registerButton" destination="0JK-Y5-4Vf" id="raT-TR-mab"/>
                         <outlet property="textFieldForEmail" destination="uhr-oA-5ot" id="491-vr-fHY"/>
@@ -171,7 +181,4 @@
             <point key="canvasLocation" x="181.59999999999999" y="149.77511244377811"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="loginScreen" width="2048" height="1365"/>
-    </resources>
 </document>

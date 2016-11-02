@@ -6,8 +6,9 @@
 //  Copyright © 2016 Mozi. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol RegistrationPresenterProtocol {
-    func register(userName:String,password:String)
+    func setupNavController(navController:UINavigationController)
+    func registration(userName:String,password:String,confirmPassword:String,firstAction:()->(),secondAction:()->())
 }

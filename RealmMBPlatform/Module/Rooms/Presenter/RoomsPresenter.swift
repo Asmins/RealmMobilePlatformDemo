@@ -18,7 +18,7 @@ extension RoomsPresenter: RoomsPresenterProtocol {
     }
     
     func setupCell(cell:RoomsCell,indexPath:NSIndexPath){
-        cell.config(name: (self.interactor?.rooms[indexPath.row].nameRooms)!, type: (self.interactor?.rooms[indexPath.row].type)!, access: (self.interactor?.rooms[indexPath.row].access)!, id: cell.id)
+        cell.config(name: (self.interactor?.rooms[indexPath.row].nameRooms)!, type: (self.interactor?.rooms[indexPath.row].type)!, access: (self.interactor?.rooms[indexPath.row].access)!, id:(self.interactor?.rooms[indexPath.row].roomID)!)
     }
 
     func numberOfItem() -> Int {
@@ -28,7 +28,13 @@ extension RoomsPresenter: RoomsPresenterProtocol {
     func access(indexPath:NSIndexPath,firstAction:()->(),secondAction:()->()) {
        self.interactor?.access(indexPath: indexPath, firstAction: firstAction, secondAction: secondAction)
     }
+    
     func checkPassword(password:String,indexPath:NSIndexPath,action:()->()) {
         self.interactor?.checkPassword(password: password, indexPath: indexPath, action: action)
+    }
+    
+    func setupNavController(navigationController:UINavigationController) {
+        navigationController.navigationBar.tintColor = UIColor.white
+        navigationController.navigationBar.backgroundColor = UIColor.black
     }
 }

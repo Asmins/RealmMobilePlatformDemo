@@ -25,12 +25,17 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         self.setupTableView(tableView: tableView)
         self.presenter?.syncData(userName: userName!, password: password!, tableView: tableView,id: idRoom!)
+        self.presenter?.setupNavController(navigationController: navigationController!)
         self.presenter?.some(textField: textField)
         title = "Messages"
     }
     
     @IBAction func sendMessageButton(_ sender: AnyObject) {
         self.presenter?.clean(textField: textField)
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
 }

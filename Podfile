@@ -4,7 +4,8 @@
  use_frameworks!
 
 target 'RealmMBPlatform' do
-	pod ‘RealmSwift’
+    pod 'SwiftGifOrigin', '~> 1.6.1'
+    pod ‘RealmSwift’
     pod 'RxSwift',    '~> 3.0'
     pod 'RxCocoa',    '~> 3.0'
     pod 'SCLAlertView'

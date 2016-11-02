@@ -30,6 +30,7 @@ class RoomsCell: UITableViewCell {
         nameRoomsLabel.text = name
         typeRoomLabel.text = type
         accessLabel.text = access
+        print(id)
         self.id = id 
      //   countLabel.text = "\(count)"
     }

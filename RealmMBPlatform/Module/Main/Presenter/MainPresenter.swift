@@ -39,4 +39,9 @@ extension MainPresenter: MainPresenterProtocol {
                         author: (interactor?.message[indexPath.row].user)!,
                         currentUser: userName)
     }
+    
+    func setupNavController(navigationController:UINavigationController) {
+        navigationController.navigationBar.tintColor = UIColor.white
+        navigationController.navigationBar.backgroundColor = UIColor.black
+    }
 }

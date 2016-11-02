@@ -70,13 +70,13 @@ extension CreateRoomInteractor: CreateRoomInteractorProtocol {
         if name.isEmpty == false && type.isEmpty == false {
             if value == 0 {
                 if password != "" {
-                    self.add(name: name, type: type, password: password, access: "Private Room")
+                    self.add(name: name, type: type, password: password, access: "Private")
                     action()
                 }else{
                     alert.showError("Error", subTitle: "Enter password")
                 }
             }else{
-                self.add(name: name, type: type, password: "0",access: "Publick Room")
+                self.add(name: name, type: type, password: "0",access: "Publick")
                 action()
             }
         }else{

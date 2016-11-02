@@ -16,4 +16,11 @@ extension LoginPresenter: LoginPresenterProtocol {
     func checkTextField(userName: UITextField, password: UITextField,action:() -> ()) -> Bool {
         return (self.interactor?.checkText(userName: userName, password: password,action: action))!
     }
+
+    func setupNavController(navController: UINavigationController) {
+        navController.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navController.navigationBar.shadowImage = UIImage()
+        navController.navigationBar.isTranslucent = true
+        navController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white,NSFontAttributeName: UIFont(name: "Bradley Hand", size: 24)!]
+    }
 }

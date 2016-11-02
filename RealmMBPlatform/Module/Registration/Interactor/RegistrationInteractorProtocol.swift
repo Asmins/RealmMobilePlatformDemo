@@ -9,5 +9,5 @@
 import Foundation
 
 protocol RegistrationInteractorProtocol {
-    func registration(userName:String,password:String)
+    func registration(userName:String,password:String,confirmPassword:String,firstAction:()->(),secondAction:()->())
 }

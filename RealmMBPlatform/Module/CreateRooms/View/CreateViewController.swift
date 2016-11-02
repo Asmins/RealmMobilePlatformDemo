@@ -24,8 +24,9 @@ class CreateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter?.synchronizeData(userName: userName!, password: password!)
         self.title = "Create room"
+        self.presenter?.synchronizeData(userName: userName!, password: password!)
+        self.presenter?.setupNavigationController(navController: navigationController!)
         self.presenter?.access(segmentController: segmentController, textField: textFieldForPassword)
         // Do any additional setup after loading the view.
     }
@@ -34,6 +35,9 @@ class CreateViewController: UIViewController {
         self.presenter?.checkToEmpty(name: textFieldForNameRoom.text!, type: textFieldForTypeRoom.text!, value: segmentController.selectedSegmentIndex, password: textFieldForPassword.text!,action: {
             self.navigation?.dismiss(viewController: self)
         })
+    }
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
 }

@@ -14,4 +14,5 @@ protocol MainPresenterProtocol {
     func numberOfItem() -> Int
     func setupCell(cell:MessageTableViewCell,indexPath:NSIndexPath,userName:String)
     func syncData(userName:String,password:String,tableView:UITableView,id:String)
+    func setupNavController(navigationController:UINavigationController)
 }

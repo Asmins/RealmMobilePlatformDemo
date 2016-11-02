@@ -23,4 +23,9 @@ extension CreateRoomPresenter: CreateRoomPresenterProtocol {
     func access(segmentController: UISegmentedControl, textField: UITextField) {
         self.interactor?.access(segmentController: segmentController, textField: textField)
     }
+    
+    func setupNavigationController(navController: UINavigationController) {
+        navController.navigationBar.tintColor = UIColor.white
+        navController.navigationBar.backgroundColor = UIColor.black
+    }
 }

@@ -8,12 +8,14 @@ PODS:
     - RxSwift (~> 3.0)
   - RxSwift (3.0.0)
   - SCLAlertView (0.7.0)
+  - SwiftGifOrigin (1.6.1)
 
 DEPENDENCIES:
   - RealmSwift
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
   - SCLAlertView
+  - SwiftGifOrigin (~> 1.6.1)
 
 SPEC CHECKSUMS:
   Realm: 0f5a194af0b7e6158b83db41b4ee1a00be7ddf1a
@@ -21,5 +23,6 @@ SPEC CHECKSUMS:
   RxCocoa: 0a2f3ae381cf16f4021a4cee7a4420f83058a965
   RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
+  SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
 
 COCOAPODS: 0.39.0

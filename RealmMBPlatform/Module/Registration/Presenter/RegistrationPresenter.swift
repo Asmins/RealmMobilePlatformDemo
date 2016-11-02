@@ -13,7 +13,16 @@ class RegistrationPresenter {
 }
 
 extension RegistrationPresenter:RegistrationPresenterProtocol {
-    func register(userName: String, password: String) {
-        self.interactor?.registration(userName: userName, password: password)
+    
+    func registration(userName:String,password:String,confirmPassword:String,firstAction:()->(),secondAction:()->()){
+        self.interactor?.registration(userName: userName, password: password, confirmPassword: confirmPassword, firstAction: firstAction, secondAction: secondAction)
+    }
+    
+    func setupNavController(navController:UINavigationController){
+        navController.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navController.navigationBar.shadowImage = UIImage()
+        navController.navigationBar.isTranslucent = true
+        navController.navigationBar.tintColor = UIColor.white
+        navController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white,NSFontAttributeName: UIFont(name: "Bradley Hand", size: 24)!]
     }
 }

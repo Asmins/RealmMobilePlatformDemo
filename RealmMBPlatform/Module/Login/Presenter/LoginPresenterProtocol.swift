@@ -9,5 +9,6 @@
 import UIKit
 
 protocol LoginPresenterProtocol {
+    func setupNavController(navController:UINavigationController)
     func checkTextField(userName:UITextField,password:UITextField,action:() -> ()) -> Bool
 }
