@@ -47,7 +47,7 @@ extension RoomsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RoomsCell") as! RoomsCell
         self.presenter?.setupCell(cell: cell, indexPath: indexPath as NSIndexPath)
-        print(cell.id)
+       // self.presenter?.getMessageFromRoom(userName: userName!, password: password!, idRoom: cell.id, tableView: tableView)
         return cell
     }
     
@@ -63,7 +63,7 @@ extension RoomsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! RoomsCell
-        self.presenter?.access(indexPath: indexPath as NSIndexPath, firstAction: {
+        self.presenter?.access(indexPath: indexPath as NSIndexPath, label: cell, firstAction: {
             let alert = SCLAlertView()
             let textField = alert.addTextField("Enter password")
             alert.addButton("Enter", action: {
@@ -90,7 +90,7 @@ extension RoomsViewController {
         title = "Rooms"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add))
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Log out", style: .bordered, target: self, action: #selector(back))
-        
+        self.view.backgroundColor = UIColor.blue
         
     }
     

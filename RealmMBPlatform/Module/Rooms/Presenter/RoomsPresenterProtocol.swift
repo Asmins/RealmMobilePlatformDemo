@@ -10,9 +10,10 @@ import UIKit
 
 protocol RoomsPresenterProtocol {
     func checkPassword(password:String,indexPath:NSIndexPath,action:()->())
-    func access(indexPath:NSIndexPath,firstAction:()->(),secondAction:()->())
+    func access(indexPath:NSIndexPath,label:RoomsCell,firstAction:()->(),secondAction:()->())
     func numberOfItem() -> Int 
     func setupCell(cell:RoomsCell,indexPath:NSIndexPath)
     func syncData(userName: String, password: String, tableView: UITableView)
     func setupNavController(navigationController:UINavigationController)
+    //func getMessageFromRoom(userName:String,password:String,idRoom:String,tableView:UITableView)
 }

@@ -12,9 +12,9 @@ class RoomsCell: UITableViewCell {
 
     var id = ""
     
-    @IBOutlet var accessLabel: UILabel!
-    @IBOutlet var typeRoomLabel: UILabel!
-    @IBOutlet var nameRoomsLabel: UILabel!
+    @IBOutlet var nameGroupLabel: UILabel!
+    @IBOutlet var authorMessageLabel: UILabel!
+    @IBOutlet var messageLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,12 +26,10 @@ class RoomsCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func config(name:String,type:String,access:String,id:String) {
-        nameRoomsLabel.text = name
-        typeRoomLabel.text = type
-        accessLabel.text = access
-        print(id)
-        self.id = id 
-     //   countLabel.text = "\(count)"
+    func config(name:String,author:String,message:String,id:String) {
+        nameGroupLabel.text = name
+        authorMessageLabel.text = author
+        messageLabel.text = message
+        self.id = id
     }
 }

@@ -31,7 +31,8 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func sendMessageButton(_ sender: AnyObject) {
-        self.presenter?.clean(textField: textField)
+        self.presenter?.addItem(text: textField.text!)
+        textField.text = ""
     }
     
     override var prefersStatusBarHidden: Bool {

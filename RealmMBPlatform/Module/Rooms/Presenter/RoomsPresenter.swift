@@ -18,15 +18,18 @@ extension RoomsPresenter: RoomsPresenterProtocol {
     }
     
     func setupCell(cell:RoomsCell,indexPath:NSIndexPath){
-        cell.config(name: (self.interactor?.rooms[indexPath.row].nameRooms)!, type: (self.interactor?.rooms[indexPath.row].type)!, access: (self.interactor?.rooms[indexPath.row].access)!, id:(self.interactor?.rooms[indexPath.row].roomID)!)
+       // if self.interactor?.message.isEmpty != true {
+            cell.config(name: (self.interactor?.rooms[indexPath.row].nameRooms)!, author: "", message: "", id: (self.interactor?.rooms[indexPath.row].roomID)!)
+            print(self.interactor?.message.last)
+       // }
     }
-
+    
     func numberOfItem() -> Int {
         return (self.interactor?.rooms.count)!
     }
     
-    func access(indexPath:NSIndexPath,firstAction:()->(),secondAction:()->()) {
-       self.interactor?.access(indexPath: indexPath, firstAction: firstAction, secondAction: secondAction)
+    func access(indexPath:NSIndexPath,label:RoomsCell,firstAction:()->(),secondAction:()->()) {
+        self.interactor?.access(indexPath: indexPath,label: label, firstAction: firstAction, secondAction: secondAction)
     }
     
     func checkPassword(password:String,indexPath:NSIndexPath,action:()->()) {
@@ -37,4 +40,8 @@ extension RoomsPresenter: RoomsPresenterProtocol {
         navigationController.navigationBar.tintColor = UIColor.white
         navigationController.navigationBar.backgroundColor = UIColor.black
     }
+    
+//    func getMessageFromRoom(userName:String,password:String,idRoom:String,tableView:UITableView) {
+//        self.interactor?.getMessageFromRoom(userName: userName, password: password, idRoom: idRoom, tableView: tableView)
+//    }
 }

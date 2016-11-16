@@ -12,6 +12,7 @@ import RealmSwift
 
 class RoomsInteractor {
     var rooms = [Rooms]()
+    var message = [Message]()
     var realm:Realm!
     var notificationToken: NotificationToken!
     var username:String!
@@ -33,7 +34,6 @@ extension RoomsInteractor: RoomsInteractorProtocol {
               
                 func updateList() {
                     self.rooms = Array(self.realm.objects(Rooms.self))
-                    var message = Array(self.realm.objects(Message.self))
                     tableView.reloadData()
                 }
                 updateList()
@@ -43,10 +43,30 @@ extension RoomsInteractor: RoomsInteractorProtocol {
             }
         })
     }
+   /*
+    func getMessageFromRoom(userName: String, password: String,idRoom:String, tableView: UITableView) {
+        let url = URL(string: "http://127.0.0.1:9080")
+        username = userName
+        SyncUser.authenticate(with: .usernamePassword(username: username, password: password, actions: []), server: url!, onCompletion: { user,_ in
+            let configuration = Realm.Configuration(syncConfiguration: (user!, URL(string: "realm://127.0.0.1:9080/\(idRoom)/messages")!))
+            
+            self.realm = try! Realm(configuration: configuration)
+            
+            func updateArray() {
+                self.message = Array(self.realm.objects(Message.self))
+                tableView.reloadData()
+            }
+            updateArray()
+            self.notificationToken = self.realm.addNotificationBlock({ _ in
+                updateArray()
+            })
+        })
+    }*/
 
-    func access(indexPath:NSIndexPath,firstAction:()->(),secondAction:()->()) {
+    func access(indexPath:NSIndexPath,label:RoomsCell,firstAction:()->(),secondAction:()->()) {
         if rooms[indexPath.row].access == "Private" {
             firstAction()
+          //  label.typeRoomLabel.text = "It is fucking private room"
         }else{
             secondAction()
         }

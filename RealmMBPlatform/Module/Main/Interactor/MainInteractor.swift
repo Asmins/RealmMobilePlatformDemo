@@ -25,7 +25,7 @@ class MainInteractor {
         
         textVariavble = Variable("\(textField.text)")
         
-        textField.rx.text.bindTo(textVariavble).addDisposableTo(disposeBag)
+        /*textField.rx.text.bindTo(textVariavble).addDisposableTo(disposeBag)
         
         textVariavble.asObservable().throttle(0.1, scheduler: MainScheduler.instance).subscribe(onNext: { text in
             
@@ -52,7 +52,7 @@ class MainInteractor {
                     self.bool = false
                 }
             }
-        }).addDisposableTo(disposeBag)
+        }).addDisposableTo(disposeBag)*/
     }
 }
 

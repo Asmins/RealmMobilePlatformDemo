@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RealmMBPlatform/Module/Rooms/View/RoomsViewController.swift"
-            timestampString = "499768177.190363"
+            filePath = "RealmMBPlatform/Module/Main/Interactor/MainInteractor.swift"
+            timestampString = "500999600.078182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "synchronizeData(userName:password:tableView:id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RealmMBPlatform/Module/Rooms/View/RoomsViewController.swift"
-            timestampString = "499768177.190363"
+            filePath = "RealmMBPlatform/Module/Main/Presenter/MainPresenter.swift"
+            timestampString = "500999646.575791"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "setupCell(cell:indexPath:userName:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,29 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RealmMBPlatform/Module/Rooms/View/RoomsViewController.swift"
-            timestampString = "499768142.518825"
+            filePath = "RealmMBPlatform/Module/Rooms/Presenter/RoomsPresenter.swift"
+            timestampString = "501001611.316028"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RealmMBPlatform/TableViewCell/RoomsCell/RoomsCell.swift"
-            timestampString = "499768152.470797"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "config(name:type:access:id:)"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "setupCell(cell:indexPath:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
