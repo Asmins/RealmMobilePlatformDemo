@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealmMBPlatform/Module/Main/Interactor/MainInteractor.swift"
-            timestampString = "501157450.475221"
+            timestampString = "501175110.855843"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "updateList()"
             landmarkType = "9">
          </BreakpointContent>

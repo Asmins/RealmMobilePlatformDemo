@@ -19,8 +19,13 @@ extension RoomsPresenter: RoomsPresenterProtocol {
     }
     
     func setupCell(cell:RoomsCell,indexPath:NSIndexPath){
-        cell.config(name: (self.interactor?.rooms[indexPath.row].nameRooms)!, author: "\((self.interactor?.rooms[indexPath.row].message.last?.user)!): " , message: (self.interactor?.rooms[indexPath.row].message.last?.textMessage)!, id: (self.interactor?.rooms[indexPath.row].roomID)!)
-        print(self.interactor?.message.last)
+        if self.interactor?.rooms[indexPath.row].message.isEmpty == true {
+            cell.config(name: (self.interactor?.rooms[indexPath.row].nameRooms)!, author: "This room is empty" , message: "", id: (self.interactor?.rooms[indexPath.row].roomID)!,date: "")
+            print(self.interactor?.message.last)
+        }else{
+            cell.config(name: (self.interactor?.rooms[indexPath.row].nameRooms)!, author: "\((self.interactor?.rooms[indexPath.row].message.last?.user)!): " , message: (self.interactor?.rooms[indexPath.row].message.last?.textMessage)!, id: (self.interactor?.rooms[indexPath.row].roomID)!,date: (self.interactor?.rooms[indexPath.row].message.last?.date)!)
+            print(self.interactor?.message.last)
+        }
     }
     
     func numberOfItem() -> Int {

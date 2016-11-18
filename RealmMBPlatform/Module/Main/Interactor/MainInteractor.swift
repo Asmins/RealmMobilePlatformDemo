@@ -61,10 +61,13 @@ class MainInteractor {
 extension MainInteractor: MainInteractorProtocol {
     
     func addNewTask(text:String) {
+        
+        let timestamp = DateFormatter.localizedString(from: Date(), dateStyle: .none, timeStyle: .medium)
         try! realm.write {
             let newMessage = Message()
             newMessage.textMessage = text
             newMessage.user = username
+            newMessage.date = timestamp
             self.rooms[id].message.append(newMessage)
         }
     }

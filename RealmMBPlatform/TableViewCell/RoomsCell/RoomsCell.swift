@@ -12,6 +12,7 @@ class RoomsCell: UITableViewCell {
 
     var id = ""
     
+    @IBOutlet var dateLabel: UILabel!
     @IBOutlet var nameGroupLabel: UILabel!
     @IBOutlet var authorMessageLabel: UILabel!
     @IBOutlet var messageLabel: UILabel!
@@ -26,10 +27,11 @@ class RoomsCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func config(name:String,author:String,message:String,id:String) {
+    func config(name:String,author:String,message:String,id:String,date:String) {
         nameGroupLabel.text = name
         authorMessageLabel.text = author
         messageLabel.text = message
+        dateLabel.text = date
         self.id = id
     }
 }
