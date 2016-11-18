@@ -12,9 +12,11 @@ import RxCocoa
 import RxSwift
 
 class MainInteractor {
+    var id = 0 
     var bool = false
     var username:String!
-    var message = [Message]()
+    var rooms = [Rooms]()
+    var messages = List<Message>()
     var realm:Realm!
     var notificationToken: NotificationToken!
     
@@ -60,7 +62,10 @@ extension MainInteractor: MainInteractorProtocol {
     
     func addNewTask(text:String) {
         try! realm.write {
-            realm.add(Message(value: [text,username!]))
+            let newMessage = Message()
+            newMessage.textMessage = text
+            newMessage.user = username
+            self.rooms[id].message.append(newMessage)
         }
     }
     
@@ -69,20 +74,23 @@ extension MainInteractor: MainInteractorProtocol {
         textField.text = ""
     }
     
-    func synchronizeData(userName: String, password: String,tableView:UITableView,id:String) {
-        let url = URL(string: "http://127.0.0.1:9080")
+    func synchronizeData(userName: String, password: String,tableView:UITableView,id:Int) {
+        let url = URL(string: "http://10.0.4.193:9080")
         username = userName
         SyncUser.authenticate(with: Credential.usernamePassword(username: userName, password: password, actions: []), server: url!, onCompletion: { user,error in
             let user = user
           
             let configuration = Realm.Configuration(
-                syncConfiguration: (user!, URL(string: "realm://127.0.0.1:9080/\(id)/messages")!)
+                syncConfiguration: (user!, URL(string: "realm://10.0.4.193:9080/all/rooms")!)
             )
             
             self.realm = try! Realm(configuration: configuration)
             
             func updateList() {
-                self.message = Array(self.realm.objects(Message.self))
+                self.rooms = Array(self.realm.objects(Rooms.self))
+                self.messages = self.rooms[id].message
+                self.id = id
+                print(self.messages)
                 tableView.reloadData()
             }
             updateList()

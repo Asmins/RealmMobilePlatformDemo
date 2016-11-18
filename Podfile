@@ -6,6 +6,7 @@
 target 'RealmMBPlatform' do
     pod 'SwiftGifOrigin', '~> 1.6.1'
     pod ‘RealmSwift’
+    pod 'IQKeyboardManagerSwift'
     pod 'RxSwift',    '~> 3.0'
     pod 'RxCocoa',    '~> 3.0'
     pod 'SCLAlertView'

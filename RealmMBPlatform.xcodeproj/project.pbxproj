@@ -67,7 +67,7 @@
 		84F216001DC28F2200FD8595 /* CreateRoomInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F215FF1DC28F2200FD8595 /* CreateRoomInteractor.swift */; };
 		84F216021DC28F4200FD8595 /* CreateRoomInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F216011DC28F4200FD8595 /* CreateRoomInteractorProtocol.swift */; };
 		84F216041DC28F9D00FD8595 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F216031DC28F9D00FD8595 /* Room.swift */; };
-		8DB2CD237550B1FCB34C7CE1 /* Pods_RealmMBPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85C30DA2A1204999FDCCD7B /* Pods_RealmMBPlatform.framework */; };
+		FF4F1C38FBEE9F72E4A334E5 /* Pods_RealmMBPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505F0AD9907C77ECD270CFDB /* Pods_RealmMBPlatform.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,8 +86,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0BED3EE8D37D681D203686C8 /* Pods-RealmMBPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmMBPlatform.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmMBPlatform/Pods-RealmMBPlatform.release.xcconfig"; sourceTree = "<group>"; };
-		0F07BDEDA9138D699E922D81 /* Pods-RealmMBPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmMBPlatform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmMBPlatform/Pods-RealmMBPlatform.debug.xcconfig"; sourceTree = "<group>"; };
+		505F0AD9907C77ECD270CFDB /* Pods_RealmMBPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmMBPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		840582841DC0C7AB003B3E84 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		840582861DC0C8A5003B3E84 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		841356A71DC08750005C1565 /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
@@ -149,7 +148,8 @@
 		84F215FF1DC28F2200FD8595 /* CreateRoomInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRoomInteractor.swift; sourceTree = "<group>"; };
 		84F216011DC28F4200FD8595 /* CreateRoomInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRoomInteractorProtocol.swift; sourceTree = "<group>"; };
 		84F216031DC28F9D00FD8595 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
-		D85C30DA2A1204999FDCCD7B /* Pods_RealmMBPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmMBPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C689552536F99CFEB87862BF /* Pods-RealmMBPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmMBPlatform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmMBPlatform/Pods-RealmMBPlatform.debug.xcconfig"; sourceTree = "<group>"; };
+		F6E7FB27FBA36232187DA475 /* Pods-RealmMBPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmMBPlatform.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmMBPlatform/Pods-RealmMBPlatform.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,17 +159,17 @@
 			files = (
 				846E64BB1DBDF42D0088D4D3 /* RealmSwift.framework in Frameworks */,
 				846E64B91DBDF42D0088D4D3 /* Realm.framework in Frameworks */,
-				8DB2CD237550B1FCB34C7CE1 /* Pods_RealmMBPlatform.framework in Frameworks */,
+				FF4F1C38FBEE9F72E4A334E5 /* Pods_RealmMBPlatform.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2BECC70A322325BFF217391B /* Frameworks */ = {
+		39D42180071C84395A3CDEE5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D85C30DA2A1204999FDCCD7B /* Pods_RealmMBPlatform.framework */,
+				505F0AD9907C77ECD270CFDB /* Pods_RealmMBPlatform.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -399,8 +399,8 @@
 				846E64B21DBDF3DD0088D4D3 /* Framework */,
 				846E649E1DBDF0B60088D4D3 /* RealmMBPlatform */,
 				846E649D1DBDF0B60088D4D3 /* Products */,
-				9009CC79B67966EEA12BF015 /* Pods */,
-				2BECC70A322325BFF217391B /* Frameworks */,
+				EED19A8BDCCD738DB7C17087 /* Pods */,
+				39D42180071C84395A3CDEE5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -536,11 +536,11 @@
 			path = SaveCell;
 			sourceTree = "<group>";
 		};
-		9009CC79B67966EEA12BF015 /* Pods */ = {
+		EED19A8BDCCD738DB7C17087 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0F07BDEDA9138D699E922D81 /* Pods-RealmMBPlatform.debug.xcconfig */,
-				0BED3EE8D37D681D203686C8 /* Pods-RealmMBPlatform.release.xcconfig */,
+				C689552536F99CFEB87862BF /* Pods-RealmMBPlatform.debug.xcconfig */,
+				F6E7FB27FBA36232187DA475 /* Pods-RealmMBPlatform.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -552,13 +552,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 846E64AE1DBDF0B60088D4D3 /* Build configuration list for PBXNativeTarget "RealmMBPlatform" */;
 			buildPhases = (
-				51444239F4BB811EA9CCFC01 /* Check Pods Manifest.lock */,
+				5F7099CEF5596CE3E304C5AC /* [CP] Check Pods Manifest.lock */,
 				846E64981DBDF0B60088D4D3 /* Sources */,
 				846E64991DBDF0B60088D4D3 /* Frameworks */,
 				846E649A1DBDF0B60088D4D3 /* Resources */,
 				846E64BD1DBDF42E0088D4D3 /* Embed Frameworks */,
-				EF2405510201517CC2F1C31A /* Embed Pods Frameworks */,
-				620C610E8BC9F58C7026C318 /* Copy Pods Resources */,
+				28B9DA5EA80BD513BE75CF3D /* [CP] Embed Pods Frameworks */,
+				9401863B88A70AB107F8F86C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -581,7 +581,8 @@
 				TargetAttributes = {
 					846E649B1DBDF0B60088D4D3 = {
 						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 729WFR3HVU;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 1;
@@ -633,49 +634,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		51444239F4BB811EA9CCFC01 /* Check Pods Manifest.lock */ = {
+		28B9DA5EA80BD513BE75CF3D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		620C610E8BC9F58C7026C318 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmMBPlatform/Pods-RealmMBPlatform-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EF2405510201517CC2F1C31A /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmMBPlatform/Pods-RealmMBPlatform-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F7099CEF5596CE3E304C5AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9401863B88A70AB107F8F86C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmMBPlatform/Pods-RealmMBPlatform-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -839,11 +840,12 @@
 		};
 		846E64AF1DBDF0B60088D4D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F07BDEDA9138D699E922D81 /* Pods-RealmMBPlatform.debug.xcconfig */;
+			baseConfigurationReference = C689552536F99CFEB87862BF /* Pods-RealmMBPlatform.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RealmMBPlatform/RealmMBPlatform.entitlements;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 729WFR3HVU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework",
@@ -852,17 +854,20 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Moz.RealmMBPlatform;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "09cd7530-71a0-425f-8a57-8e5fba0f5117";
+				PROVISIONING_PROFILE_SPECIFIER = "iOS Development *";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		846E64B01DBDF0B60088D4D3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BED3EE8D37D681D203686C8 /* Pods-RealmMBPlatform.release.xcconfig */;
+			baseConfigurationReference = F6E7FB27FBA36232187DA475 /* Pods-RealmMBPlatform.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RealmMBPlatform/RealmMBPlatform.entitlements;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 729WFR3HVU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework",
@@ -871,6 +876,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Moz.RealmMBPlatform;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "09cd7530-71a0-425f-8a57-8e5fba0f5117";
+				PROVISIONING_PROFILE_SPECIFIER = "iOS Development *";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

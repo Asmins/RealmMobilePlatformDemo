@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RealmMBPlatform.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>35BB000B35DD0E0E61A79AAAB59A6E03</key>
+		<key>47A2B8007FFC64475D38D63F281C68FA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4D62AAB575F01FFD5F1774FFE6D8C6D2</key>
+		<key>4DC059E04CBA98AEDDB5C34E02D551E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>72A3A1C838EA06301C84308F113FDAD8</key>
+		<key>58EBA5DB7FCAFA618DF114CEF8A97C3E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8E8C20C96F5F4790463ECE679BD743E2</key>
+		<key>6BDE6A469F6E108EDA60AD2620240346</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C2BBD8AF2F54D0A5F4592D5A6F1D4830</key>
+		<key>77E9307023A14F682FF0CD53189E36F6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E7854710208C68A060DA5CE9671676DD</key>
+		<key>81ABB36F4D84C4BB6C31116842D30976</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F79465301EFAE8F628CF11F9DC084486</key>
+		<key>AC7134AF825AAB45D304B48818A87E6F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E97EC00E483E86F61324F86B0E8D9FFD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

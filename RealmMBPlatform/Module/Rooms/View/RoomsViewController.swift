@@ -68,14 +68,14 @@ extension RoomsViewController: UITableViewDelegate {
             let textField = alert.addTextField("Enter password")
             alert.addButton("Enter", action: {
                 self.presenter?.checkPassword(password: textField.text!, indexPath: indexPath as NSIndexPath, action: {
-                    print(cell.id)
-                    self.navigation?.showMainView(userName: self.userName!, password: self.password!, idRoom: cell.id)
+                print(indexPath.row)
+                self.navigation?.showMainView(userName: self.userName!, password: self.password!, idRoom: indexPath.row)
                 })
             })
             alert.showSuccess("Private Room", subTitle: "This room is private. If you want connect to this room,you must enter password")
             }, secondAction: {
-                print(cell.id)
-                self.navigation?.showMainView(userName: userName!, password: password!, idRoom: cell.id)
+                print(indexPath.row)
+                self.navigation?.showMainView(userName: self.userName!, password: self.password!, idRoom: indexPath.row)
         })
         tableView.deselectRow(at: indexPath, animated: true)
     }

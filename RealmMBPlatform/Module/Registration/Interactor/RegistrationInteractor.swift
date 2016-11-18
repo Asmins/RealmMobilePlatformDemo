@@ -18,7 +18,7 @@ extension RegistrationInteractor: RegistrationInteractorProtocol {
     func registration(userName:String,password:String,confirmPassword:String,firstAction:()->(),secondAction:()->()) {
         if userName != "" && password != "" {
             if password == confirmPassword {
-                SyncUser.authenticate(with: .usernamePassword(username: userName, password: password, actions: .createAccount), server: URL(string: "http://127.0.0.1:9080")! , onCompletion: {_,_ in })
+                SyncUser.authenticate(with: .usernamePassword(username: userName, password: password, actions: .createAccount), server: URL(string: "http://10.0.4.193:9080")! , onCompletion: {_,_ in })
                 firstAction()
             }else{
                 secondAction()

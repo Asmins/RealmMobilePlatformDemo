@@ -23,7 +23,7 @@ extension RoomsWireframe: RoomsWireframeProtocol {
         roomViewController?.navigationController?.pushViewController(createViewController, animated: true)
     }
     
-    func showMainView(userName: String, password: String, idRoom: String) {
+    func showMainView(userName: String, password: String, idRoom: Int) {
         let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
         mainViewController.userName = userName
         mainViewController.password = password

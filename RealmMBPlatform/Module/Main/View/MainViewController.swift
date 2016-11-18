@@ -19,7 +19,7 @@ class MainViewController: UIViewController {
     
     var userName: String?
     var password: String?
-    var idRoom: String?
+    var idRoom: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +31,10 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func sendMessageButton(_ sender: AnyObject) {
-        self.presenter?.addItem(text: textField.text!)
-        textField.text = ""
+        if !(textField.text?.isEmpty)! {
+            self.presenter?.addItem(text: textField.text!)
+            textField.text = ""
+        }
     }
     
     override var prefersStatusBarHidden: Bool {

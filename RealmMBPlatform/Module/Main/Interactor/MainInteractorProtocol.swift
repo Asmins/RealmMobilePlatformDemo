@@ -11,5 +11,5 @@ import UIKit
 protocol MainInteractorProtocol {
     func addNewTask(text:String)
     func clean(textField:UITextField)
-    func synchronizeData(userName:String,password:String,tableView:UITableView,id:String)
+    func synchronizeData(userName:String,password:String,tableView:UITableView,id:Int)
 }

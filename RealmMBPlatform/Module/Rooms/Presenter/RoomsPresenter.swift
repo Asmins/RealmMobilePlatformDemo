@@ -13,15 +13,14 @@ class RoomsPresenter {
 }
 
 extension RoomsPresenter: RoomsPresenterProtocol {
+    
     func syncData(userName: String, password: String, tableView: UITableView){
         self.interactor?.synchronizeData(userName: userName, password: password, tableView: tableView)
     }
     
     func setupCell(cell:RoomsCell,indexPath:NSIndexPath){
-       // if self.interactor?.message.isEmpty != true {
-            cell.config(name: (self.interactor?.rooms[indexPath.row].nameRooms)!, author: "", message: "", id: (self.interactor?.rooms[indexPath.row].roomID)!)
-            print(self.interactor?.message.last)
-       // }
+        cell.config(name: (self.interactor?.rooms[indexPath.row].nameRooms)!, author: "\((self.interactor?.rooms[indexPath.row].message.last?.user)!): " , message: (self.interactor?.rooms[indexPath.row].message.last?.textMessage)!, id: (self.interactor?.rooms[indexPath.row].roomID)!)
+        print(self.interactor?.message.last)
     }
     
     func numberOfItem() -> Int {
@@ -41,7 +40,4 @@ extension RoomsPresenter: RoomsPresenterProtocol {
         navigationController.navigationBar.backgroundColor = UIColor.black
     }
     
-//    func getMessageFromRoom(userName:String,password:String,idRoom:String,tableView:UITableView) {
-//        self.interactor?.getMessageFromRoom(userName: userName, password: password, idRoom: idRoom, tableView: tableView)
-//    }
 }

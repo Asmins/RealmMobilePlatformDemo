@@ -23,7 +23,7 @@ class CreateRoomInteractor {
 extension CreateRoomInteractor: CreateRoomInteractorProtocol {
     
     func synchronizeData(userName: String, password: String) {
-       let url = URL(string: "http://127.0.0.1:9080")
+       let url = URL(string: "http://10.0.4.193:9080")
         SyncUser.authenticate(with: .usernamePassword(username: userName, password: password, actions: []), server: url!, onCompletion: {user,error in
             let user = user
            
@@ -32,7 +32,7 @@ extension CreateRoomInteractor: CreateRoomInteractorProtocol {
             }
             
             let configuration = Realm.Configuration(
-                syncConfiguration: (user!, URL(string: "realm://127.0.0.1:9080/all/rooms")!)
+                syncConfiguration: (user!, URL(string: "realm://10.0.4.193:9080/all/rooms")!)
             )
             self.realm = try! Realm(configuration: configuration)
         })
@@ -57,11 +57,11 @@ extension CreateRoomInteractor: CreateRoomInteractorProtocol {
     func add(name: String, type: String, password: String,access:String) {
         if password == "" {
             try! realm.write {
-                realm.add(Rooms(value: [name,type,access,"0","\(uuid)"]))
+                realm.add(Rooms(value: [name,type,access,"0","\(uuid)",List<Message>()]))
             }
         }else{
             try! realm.write {
-                realm.add(Rooms(value: [name,type,access,password,"\(uuid)"]))
+                realm.add(Rooms(value: [name,type,access,password,"\(uuid)",List<Message>()]))
             }
         }
     }

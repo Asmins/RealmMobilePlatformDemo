@@ -26,18 +26,19 @@ extension MainPresenter: MainPresenterProtocol {
         self.interactor?.clean(textField: textField)
     }
     
-    func syncData(userName: String, password: String, tableView: UITableView,id:String) {
+    func syncData(userName: String, password: String, tableView: UITableView,id:Int) {
         self.interactor?.synchronizeData(userName: userName, password: password, tableView: tableView, id: id)
     }
     
     func numberOfItem() -> Int {
-        return (self.interactor?.message.count)!
+        return 0
     }
     
     func setupCell(cell: MessageTableViewCell, indexPath: NSIndexPath,userName:String) {
-        cell.configCell(messageText: (interactor?.message[indexPath.row].textMessage)!,
-                        author: (interactor?.message[indexPath.row].user)!,
-                        currentUser: userName)
+//        cell.configCell(messageText: (interactor?.message[indexPath.row].textMessage)!,
+//                        author: (interactor?.message[indexPath.row].user)!,
+//                        currentUser: userName)
+        cell.configCell(messageText: "", author: "", currentUser: "")
     }
     
     func setupNavController(navigationController:UINavigationController) {

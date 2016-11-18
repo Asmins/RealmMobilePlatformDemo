@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Up1-aq-z03" id="B5Y-SQ-FrG">
-                <frame key="frameInset" width="375" height="59"/>
+                <frame key="frameInset" width="375" height="60"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXi-YM-yDu">
@@ -20,10 +20,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNw-CF-MK5">
-                        <constraints>
-                            <constraint firstAttribute="width" constant="60" id="Hdb-Ar-3zD"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Long name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNw-CF-MK5">
                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -38,7 +35,7 @@
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eXO-Fo-iLU" secondAttribute="trailing" constant="20" id="AZ4-ZK-qrj"/>
                     <constraint firstItem="XNw-CF-MK5" firstAttribute="top" secondItem="IXi-YM-yDu" secondAttribute="bottom" constant="3" id="ByF-UZ-D14"/>
                     <constraint firstItem="IXi-YM-yDu" firstAttribute="top" secondItem="B5Y-SQ-FrG" secondAttribute="top" constant="5" id="Iuj-5o-ipT"/>
-                    <constraint firstItem="eXO-Fo-iLU" firstAttribute="leading" secondItem="XNw-CF-MK5" secondAttribute="trailing" constant="10" id="RSG-Xi-CkD"/>
+                    <constraint firstItem="eXO-Fo-iLU" firstAttribute="leading" secondItem="XNw-CF-MK5" secondAttribute="trailing" constant="5" id="RSG-Xi-CkD"/>
                     <constraint firstItem="IXi-YM-yDu" firstAttribute="leading" secondItem="B5Y-SQ-FrG" secondAttribute="leading" constant="10" id="bfQ-Bl-if4"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IXi-YM-yDu" secondAttribute="trailing" constant="20" id="fpt-nb-zgL"/>
                     <constraint firstItem="XNw-CF-MK5" firstAttribute="leading" secondItem="B5Y-SQ-FrG" secondAttribute="leading" constant="10" id="gdT-hv-tIb"/>

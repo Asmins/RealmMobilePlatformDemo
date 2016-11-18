@@ -12,7 +12,6 @@ import RealmSwift
 class Message: Object {
     dynamic var textMessage = ""
     dynamic var user = ""
-    //dynamic var typeRoom = ""
 }
 
 class Rooms: Object {
@@ -21,4 +20,5 @@ class Rooms: Object {
     dynamic var access = ""
     dynamic var password = ""
     dynamic var roomID = ""
+    let message = List<Message>()
 }
