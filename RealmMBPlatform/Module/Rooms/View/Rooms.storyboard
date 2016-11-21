@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C41b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -18,25 +18,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tFb-Xs-Wqa">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5T9-2v-AxU">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="GYg-dr-n25" id="8gA-Ey-qiS"/>
-                                    <outlet property="delegate" destination="GYg-dr-n25" id="1AM-Vv-XUu"/>
+                                    <outlet property="dataSource" destination="GYg-dr-n25" id="FVk-id-zle"/>
+                                    <outlet property="delegate" destination="GYg-dr-n25" id="7pJ-jA-ow5"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bw0-pE-X05">
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="2m9-Wx-pFb">
+                                        <color key="color" red="1" green="0.24056595480000001" blue="0.2140468033" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GV0-Pz-ihF">
+                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLightItalic" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94911562066689792" green="0.92530572320801596" blue="0.96409026015228427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="GV0-Pz-ihF" firstAttribute="leading" secondItem="Bw0-pE-X05" secondAttribute="leading" id="9Ha-Bu-hNW"/>
+                                    <constraint firstAttribute="trailing" secondItem="GV0-Pz-ihF" secondAttribute="trailing" id="9ZL-nK-Mlp"/>
+                                    <constraint firstAttribute="height" constant="120" id="Ywe-Jd-z1i"/>
+                                    <constraint firstAttribute="bottom" secondItem="GV0-Pz-ihF" secondAttribute="bottom" constant="5" id="anA-qy-gVm"/>
+                                    <constraint firstItem="2m9-Wx-pFb" firstAttribute="centerX" secondItem="Bw0-pE-X05" secondAttribute="centerX" id="cbK-d4-lhJ"/>
+                                    <constraint firstAttribute="width" constant="120" id="fDg-gc-s0C"/>
+                                    <constraint firstItem="2m9-Wx-pFb" firstAttribute="centerY" secondItem="Bw0-pE-X05" secondAttribute="centerY" id="wVD-YJ-Heo"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="tFb-Xs-Wqa" secondAttribute="trailing" id="2Fz-0X-yNr"/>
-                            <constraint firstItem="tFb-Xs-Wqa" firstAttribute="leading" secondItem="zYZ-Y1-017" secondAttribute="leading" id="PWx-5G-n2M"/>
-                            <constraint firstItem="tFb-Xs-Wqa" firstAttribute="top" secondItem="5nD-mv-bVY" secondAttribute="bottom" constant="-40" id="UW6-Wv-JSN"/>
-                            <constraint firstItem="wvO-Go-GDV" firstAttribute="top" secondItem="tFb-Xs-Wqa" secondAttribute="bottom" id="u44-we-TnX"/>
+                            <constraint firstItem="5T9-2v-AxU" firstAttribute="leading" secondItem="zYZ-Y1-017" secondAttribute="leading" id="2sC-gM-a5b"/>
+                            <constraint firstItem="Bw0-pE-X05" firstAttribute="centerY" secondItem="5T9-2v-AxU" secondAttribute="centerY" id="Enc-pB-jeK"/>
+                            <constraint firstItem="wvO-Go-GDV" firstAttribute="top" secondItem="5T9-2v-AxU" secondAttribute="bottom" id="ICa-Ha-Eau"/>
+                            <constraint firstItem="5T9-2v-AxU" firstAttribute="top" secondItem="5nD-mv-bVY" secondAttribute="bottom" constant="-33" id="IxQ-k3-0z4"/>
+                            <constraint firstAttribute="trailing" secondItem="5T9-2v-AxU" secondAttribute="trailing" id="ktR-JR-GWm"/>
+                            <constraint firstItem="Bw0-pE-X05" firstAttribute="centerX" secondItem="5T9-2v-AxU" secondAttribute="centerX" id="qqR-Jk-aoO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="B4b-OY-ga5"/>
                     <connections>
-                        <outlet property="tableView" destination="tFb-Xs-Wqa" id="neT-HZ-VyC"/>
+                        <outlet property="activityIndicator" destination="2m9-Wx-pFb" id="UEr-Hu-Be2"/>
+                        <outlet property="activityView" destination="Bw0-pE-X05" id="csC-uq-ZPP"/>
+                        <outlet property="tableView" destination="5T9-2v-AxU" id="75P-EC-hvQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="InO-uh-xdd" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -14,6 +14,8 @@ class MainViewController: UIViewController {
 
     @IBOutlet var textField: UITextField!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var activityIndicatorView: UIView!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     var presenter: MainPresenter?
     
@@ -24,7 +26,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView(tableView: tableView)
-        self.presenter?.syncData(userName: userName!, password: password!, tableView: tableView,id: idRoom!)
+        self.presenter?.syncData(userName: userName!, password: password!, tableView: tableView,id: idRoom!,indicator: activityIndicator,view:activityIndicatorView)
         self.presenter?.setupNavController(navigationController: navigationController!)
         self.presenter?.some(textField: textField)
         title = "Messages"
@@ -61,3 +63,4 @@ extension MainViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
     }
 }
+

@@ -77,9 +77,11 @@ extension MainInteractor: MainInteractorProtocol {
         textField.text = ""
     }
     
-    func synchronizeData(userName: String, password: String,tableView:UITableView,id:Int) {
+    func synchronizeData(userName: String, password: String,tableView:UITableView,id:Int,indicator:UIActivityIndicatorView,view:UIView) {
         let url = URL(string: "http://10.0.4.193:9080")
         username = userName
+        view.isHidden = false
+        indicator.startAnimating()
         SyncUser.authenticate(with: Credential.usernamePassword(username: userName, password: password, actions: []), server: url!, onCompletion: { user,error in
             let user = user
           
@@ -93,7 +95,8 @@ extension MainInteractor: MainInteractorProtocol {
                 self.rooms = Array(self.realm.objects(Rooms.self))
                 self.messages = self.rooms[id].message
                 self.id = id
-                print(self.messages)
+                view.isHidden = true
+                indicator.stopAnimating()
                 tableView.reloadData()
             }
             updateList()

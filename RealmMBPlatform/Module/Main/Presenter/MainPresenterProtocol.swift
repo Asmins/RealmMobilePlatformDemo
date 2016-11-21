@@ -13,6 +13,6 @@ protocol MainPresenterProtocol {
     func clean(textField:UITextField)
     func numberOfItem() -> Int
     func setupCell(cell:MessageTableViewCell,indexPath:NSIndexPath,userName:String)
-    func syncData(userName:String,password:String,tableView:UITableView,id:Int)
+    func syncData(userName:String,password:String,tableView:UITableView,id:Int,indicator:UIActivityIndicatorView,view:UIView)
     func setupNavController(navigationController:UINavigationController)
 }

@@ -13,7 +13,7 @@ protocol RoomsPresenterProtocol {
     func access(indexPath:NSIndexPath,label:RoomsCell,firstAction:()->(),secondAction:()->())
     func numberOfItem() -> Int 
     func setupCell(cell:RoomsCell,indexPath:NSIndexPath)
-    func syncData(userName: String, password: String, tableView: UITableView)
+    func syncData(userName: String, password: String, tableView: UITableView,activityIndicator:UIActivityIndicatorView,view:UIView)
     func setupNavController(navigationController:UINavigationController)
     //func getMessageFromRoom(userName:String,password:String,idRoom:String,tableView:UITableView)
 }

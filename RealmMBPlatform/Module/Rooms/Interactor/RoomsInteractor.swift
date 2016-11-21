@@ -16,14 +16,16 @@ class RoomsInteractor {
     var realm:Realm!
     var notificationToken: NotificationToken!
     var username:String!
+
 }
 
 extension RoomsInteractor: RoomsInteractorProtocol {
-    func synchronizeData(userName: String, password: String, tableView: UITableView) {
+    func synchronizeData(userName: String, password: String, tableView: UITableView,activityIndicator:UIActivityIndicatorView,view:UIView) {
         let url = URL(string: "http://10.0.4.193:9080")
         username = userName
+        view.isHidden = false
+        activityIndicator.startAnimating()
         SyncUser.authenticate(with: Credential.usernamePassword(username: userName, password: password, actions: []), server: url!, onCompletion: { user,error in
-            
             if user == nil {
                 let alert = SCLAlertView()
                 alert.showError("Error", subTitle: "User not found")
@@ -34,6 +36,10 @@ extension RoomsInteractor: RoomsInteractorProtocol {
               
                 func updateList() {
                     self.rooms = Array(self.realm.objects(Rooms.self))
+                    if self.rooms != nil {
+                        activityIndicator.stopAnimating()
+                        view.isHidden = true
+                    }
                     tableView.reloadData()
                 }
                 updateList()

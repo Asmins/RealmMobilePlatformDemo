@@ -13,6 +13,8 @@ class RoomsViewController: UIViewController {
     
     var navigation: RoomsWireframe?
     
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet var activityView: UIView!
     @IBOutlet var tableView: UITableView!
     var presenter: RoomsPresenter?
     var text = "test"
@@ -25,7 +27,7 @@ class RoomsViewController: UIViewController {
         self.setupTableView(tableView:tableView)
         self.setupUI()
         self.presenter?.setupNavController(navigationController: navigationController!)
-        self.presenter?.syncData(userName: userName!, password: password!, tableView: tableView)
+        self.presenter?.syncData(userName: userName!, password: password!, tableView: tableView,activityIndicator: activityIndicator,view:activityView)
         print(Realm.Configuration.defaultConfiguration.fileURL)
         // Do any additional setup after loading the view.
     }
@@ -47,7 +49,6 @@ extension RoomsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RoomsCell") as! RoomsCell
         self.presenter?.setupCell(cell: cell, indexPath: indexPath as NSIndexPath)
-       // self.presenter?.getMessageFromRoom(userName: userName!, password: password!, idRoom: cell.id, tableView: tableView)
         return cell
     }
     

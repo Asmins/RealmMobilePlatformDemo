@@ -14,8 +14,8 @@ class RoomsPresenter {
 
 extension RoomsPresenter: RoomsPresenterProtocol {
     
-    func syncData(userName: String, password: String, tableView: UITableView){
-        self.interactor?.synchronizeData(userName: userName, password: password, tableView: tableView)
+    func syncData(userName: String, password: String, tableView: UITableView,activityIndicator:UIActivityIndicatorView,view:UIView){
+        self.interactor?.synchronizeData(userName: userName, password: password, tableView: tableView,activityIndicator: activityIndicator,view:view)
     }
     
     func setupCell(cell:RoomsCell,indexPath:NSIndexPath){
@@ -24,7 +24,6 @@ extension RoomsPresenter: RoomsPresenterProtocol {
             print(self.interactor?.message.last)
         }else{
             cell.config(name: (self.interactor?.rooms[indexPath.row].nameRooms)!, author: "\((self.interactor?.rooms[indexPath.row].message.last?.user)!): " , message: (self.interactor?.rooms[indexPath.row].message.last?.textMessage)!, id: (self.interactor?.rooms[indexPath.row].roomID)!,date: (self.interactor?.rooms[indexPath.row].message.last?.date)!)
-            print(self.interactor?.message.last)
         }
     }
     
