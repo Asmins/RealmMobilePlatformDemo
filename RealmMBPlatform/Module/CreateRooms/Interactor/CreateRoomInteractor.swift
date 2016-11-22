@@ -54,33 +54,33 @@ extension CreateRoomInteractor: CreateRoomInteractorProtocol {
     }
     
     
-    func add(name: String, type: String, password: String,access:String) {
+    func add(name: String,user: String, password: String,access:String) {
         if password == "" {
             try! realm.write {
-                realm.add(Rooms(value: [name,type,access,"0","\(uuid)",List<Message>()]))
+                realm.add(Rooms(value: [name,user,access,"0","\(uuid)",List<Message>()]))
             }
         }else{
             try! realm.write {
-                realm.add(Rooms(value: [name,type,access,password,"\(uuid)",List<Message>()]))
+                realm.add(Rooms(value: [name,user,access,password,"\(uuid)",List<Message>()]))
             }
         }
     }
     
-    func checkToEmpty(name:String,type:String,value:Int,password:String,action:()->()) {
-        if name.isEmpty == false && type.isEmpty == false {
-            if value == 0 {
-                if password != "" {
-                    self.add(name: name, type: type, password: password, access: "Private")
-                    action()
-                }else{
-                    alert.showError("Error", subTitle: "Enter password")
-                }
-            }else{
-                self.add(name: name, type: type, password: "0",access: "Publick")
-                action()
-            }
-        }else{
-            alert.showError("Not save", subTitle: "Enter all fields")
-        }
-    }
+//    func checkToEmpty(name:String,type:String,value:Int,password:String,action:()->()) {
+//        if name.isEmpty == false && type.isEmpty == false {
+//            if value == 0 {
+//                if password != "" {
+//                    self.add(name: name, type: type, password: password, access: "Private")
+//                    action()
+//                }else{
+//                    alert.showError("Error", subTitle: "Enter password")
+//                }
+//            }else{
+//                self.add(name: name, type: type, password: "0",access: "Publick")
+//                action()
+//            }
+//        }else{
+//            alert.showError("Not save", subTitle: "Enter all fields")
+//        }
+//    }
 }

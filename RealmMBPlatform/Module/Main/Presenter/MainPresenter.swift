@@ -14,6 +14,10 @@ class MainPresenter {
     func some(textField:UITextField){
         self.interactor?.some(textField: textField)
     }
+    
+    @objc func settingRoom(){
+    
+    }
 }
 
 extension MainPresenter: MainPresenterProtocol {
@@ -41,5 +45,6 @@ extension MainPresenter: MainPresenterProtocol {
     func setupNavController(navigationController:UINavigationController) {
         navigationController.navigationBar.tintColor = UIColor.white
         navigationController.navigationBar.backgroundColor = UIColor.black
+        // navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(settingRoom))
     }
 }

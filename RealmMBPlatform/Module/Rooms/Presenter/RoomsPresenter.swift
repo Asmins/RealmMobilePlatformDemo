@@ -21,9 +21,12 @@ extension RoomsPresenter: RoomsPresenterProtocol {
     func setupCell(cell:RoomsCell,indexPath:NSIndexPath){
         if self.interactor?.rooms[indexPath.row].message.isEmpty == true {
             cell.config(name: (self.interactor?.rooms[indexPath.row].nameRooms)!, author: "This room is empty" , message: "", id: (self.interactor?.rooms[indexPath.row].roomID)!,date: "")
-            print(self.interactor?.message.last)
         }else{
-            cell.config(name: (self.interactor?.rooms[indexPath.row].nameRooms)!, author: "\((self.interactor?.rooms[indexPath.row].message.last?.user)!): " , message: (self.interactor?.rooms[indexPath.row].message.last?.textMessage)!, id: (self.interactor?.rooms[indexPath.row].roomID)!,date: (self.interactor?.rooms[indexPath.row].message.last?.date)!)
+            if self.interactor?.rooms[indexPath.row].access == "Private" {
+                cell.config(name: ((self.interactor?.rooms[indexPath.row].nameRooms)!), author: "This is private room", message: "", id: (self.interactor?.rooms[indexPath.row].roomID)!, date: "")
+            }else{
+              cell.config(name: (self.interactor?.rooms[indexPath.row].nameRooms)!, author: "\((self.interactor?.rooms[indexPath.row].message.last?.user)!): " , message: (self.interactor?.rooms[indexPath.row].message.last?.textMessage)!, id: (self.interactor?.rooms[indexPath.row].roomID)!,date: (self.interactor?.rooms[indexPath.row].message.last?.date)!)
+            }
         }
     }
     

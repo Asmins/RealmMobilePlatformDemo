@@ -12,5 +12,5 @@ protocol CreateRoomPresenterProtocol {
     func synchronizeData(userName: String, password: String)
     func setupNavigationController(navController:UINavigationController)
     func setupCell(indexPath:IndexPath,tableView:UITableView) -> UITableViewCell
-    func addNewGroup()
+    func addNewGroup(userName:String)
 }

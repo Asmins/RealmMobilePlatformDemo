@@ -61,17 +61,11 @@ extension CreateRoomPresenter: CreateRoomPresenterProtocol {
             self.nameTextField?.addTarget(self, action: #selector(changesTextField), for: UIControlEvents.editingDidEnd)
             cell = aCell
         case 1:
-            let aCell = tableView.dequeueReusableCell(withIdentifier: "CreateRoomCell") as! CreateRoomCell
-            aCell.mainTextField.placeholder = "Enter type room"
-            self.typeTextField = aCell.mainTextField
-            self.typeTextField?.addTarget(self, action: #selector(changesTextField), for: .editingDidEnd)
-            cell = aCell
-        case 2:
             let aCell = tableView.dequeueReusableCell(withIdentifier: "AccessRoomCell") as! AccessRoomCell
             self.tableView = tableView
             aCell.switchAccess.addTarget(self, action: #selector(switchChange), for: UIControlEvents.valueChanged)
             cell = aCell
-        case 3:
+        case 2:
             let aCell = tableView.dequeueReusableCell(withIdentifier: "CreateRoomCell") as! CreateRoomCell
             if textForPasswordTextField == "Only for private room" {
                 aCell.mainTextField.isEnabled = false
@@ -83,7 +77,7 @@ extension CreateRoomPresenter: CreateRoomPresenterProtocol {
             self.passwordTextField = aCell.mainTextField
             self.passwordTextField?.addTarget(self, action: #selector(changesTextField), for: .editingDidEnd)
             cell = aCell
-        case 4:
+        case 3:
             let aCell = tableView.dequeueReusableCell(withIdentifier: "SaveCell") as! SaveCell
             cell = aCell
         default:
@@ -92,11 +86,11 @@ extension CreateRoomPresenter: CreateRoomPresenterProtocol {
         return cell
     }
     
-    func addNewGroup() {
+    func addNewGroup(userName:String) {
         if bool == true {
-            self.interactor?.add(name: (nameTextField?.text)!, type: (typeTextField?.text!)!, password: (passwordTextField?.text)!, access: "Private")
+            self.interactor?.add(name: (nameTextField?.text)!, user: userName, password: (passwordTextField?.text)!, access: "Private")
         }else{
-            self.interactor?.add(name: (nameTextField?.text)!, type: (typeTextField?.text!)!, password: "0", access: "Public")
+            self.interactor?.add(name: (nameTextField?.text)!, user: userName, password: "0", access: "Public")
         }
     }
     

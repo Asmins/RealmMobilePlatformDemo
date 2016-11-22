@@ -16,6 +16,7 @@ class CreateViewController: UIViewController {
     
     var presenter: CreateRoomPresenter?
     var navigation: CreateRoomWireframe?
+    
     var userName:String?
     var password:String?
     
@@ -25,16 +26,8 @@ class CreateViewController: UIViewController {
         self.setupTableView(tableView: tableView)
         self.presenter?.synchronizeData(userName: userName!, password: password!)
         self.presenter?.setupNavigationController(navController: navigationController!)
-//        self.presenter?.access(segmentController: segmentController, textField: textFieldForPassword)
-        // Do any additional setup after loading the view.
- 
     }
     
-    @IBAction func saveButtonAction(_ sender: AnyObject) {
-//        //self.presenter?.checkToEmpty(name: textFieldForNameRoom.text!, type: textFieldForTypeRoom.text!, value: segmentController.selectedSegmentIndex, password: textFieldForPassword.text!,action: {
-//            self.navigation?.dismiss(viewController: self)
-//        })
-    }
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -59,15 +52,15 @@ extension CreateViewController: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return 4
     }
 }
 
 extension CreateViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if indexPath.section == 4 {
-            self.presenter?.addNewGroup()
+        if indexPath.section == 3 {
+            self.presenter?.addNewGroup(userName: userName!)
             self.navigation?.dismiss(viewController: self)
         }
     }
