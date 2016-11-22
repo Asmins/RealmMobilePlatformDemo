@@ -9,8 +9,8 @@
 import UIKit
 
 protocol CreateRoomPresenterProtocol {
-    func access(segmentController:UISegmentedControl,textField:UITextField)
-    func synchronizeData(userName:String,password:String)
-    func checkToEmpty(name:String,type:String,value:Int,password:String,action:()->())
+    func synchronizeData(userName: String, password: String)
     func setupNavigationController(navController:UINavigationController)
+    func setupCell(indexPath:IndexPath,tableView:UITableView) -> UITableViewCell
+    func addNewGroup()
 }

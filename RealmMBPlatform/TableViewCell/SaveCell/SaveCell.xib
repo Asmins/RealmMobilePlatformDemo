@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2327e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16C41b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -12,24 +15,21 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WpF-gE-Qm5" id="k17-Ai-yes">
-                <frame key="frameInset" width="375" height="49"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBC-um-ia5">
-                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
-                        <state key="normal" title="SAVE">
-                            <color key="titleColor" red="1" green="0.056107677719999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </state>
-                        <connections>
-                            <action selector="save:" destination="WpF-gE-Qm5" eventType="touchUpInside" id="REK-ym-EZd"/>
-                        </connections>
-                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ax3-iY-CE8">
+                        <rect key="frame" x="5" y="5" width="365" height="39.5"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                        <color key="textColor" red="1" green="0.0093617555427757404" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="hBC-um-ia5" firstAttribute="top" secondItem="k17-Ai-yes" secondAttribute="top" constant="5" id="WDc-B7-uND"/>
-                    <constraint firstAttribute="bottom" secondItem="hBC-um-ia5" secondAttribute="bottom" constant="5" id="XVb-0A-BnM"/>
-                    <constraint firstItem="hBC-um-ia5" firstAttribute="leading" secondItem="k17-Ai-yes" secondAttribute="leading" constant="10" id="hzp-dT-jc2"/>
-                    <constraint firstAttribute="trailing" secondItem="hBC-um-ia5" secondAttribute="trailing" constant="10" id="sjY-aS-dJg"/>
+                    <constraint firstItem="ax3-iY-CE8" firstAttribute="leading" secondItem="k17-Ai-yes" secondAttribute="leading" constant="5" id="5XR-eO-BF7"/>
+                    <constraint firstAttribute="bottom" secondItem="ax3-iY-CE8" secondAttribute="bottom" constant="5" id="AYz-aw-gmV"/>
+                    <constraint firstAttribute="trailing" secondItem="ax3-iY-CE8" secondAttribute="trailing" constant="5" id="WLL-ds-2xs"/>
+                    <constraint firstItem="ax3-iY-CE8" firstAttribute="top" secondItem="k17-Ai-yes" secondAttribute="top" constant="5" id="c4B-n2-hJa"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="25" y="148"/>

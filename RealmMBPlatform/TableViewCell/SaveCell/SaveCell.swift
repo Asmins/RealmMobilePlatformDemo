@@ -20,16 +20,4 @@ class SaveCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-    
-
-    @IBAction func save(_ sender: AnyObject) {
-        self.save{
-            
-        }
-    }
-    
-    
-    func save(action:()->()) {
-        action()
-    }
 }

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C41b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,15 +21,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ryy-V2-Z8V"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ryy-V2-Z8V">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hf6-FL-6Ue">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login or Create Your New Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1q-OO-xMY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login or Create Your New Account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1q-OO-xMY">
+                                        <rect key="frame" x="20" y="80" width="335" height="27.5"/>
                                         <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uhr-oA-5ot">
+                                        <rect key="frame" x="20" y="157.5" width="335" height="40"/>
                                         <color key="backgroundColor" red="0.78626289373727021" green="0.78626289373727021" blue="0.78626289373727021" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -48,6 +56,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Vq-Zi-AGG">
+                                        <rect key="frame" x="20" y="217.5" width="335" height="40"/>
                                         <color key="backgroundColor" red="0.78626289370000002" green="0.78626289370000002" blue="0.78626289370000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -69,6 +78,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIG-ro-Mx3">
+                                        <rect key="frame" x="20" y="297.5" width="335" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -88,11 +98,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don`t Have an Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZ7-rc-Hym">
+                                        <rect key="frame" x="20" y="387.5" width="335" height="27.5"/>
                                         <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JK-Y5-4Vf">
+                                        <rect key="frame" x="20" y="425" width="335" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -124,12 +136,12 @@
                                     <constraint firstItem="TZ7-rc-Hym" firstAttribute="leading" secondItem="Hf6-FL-6Ue" secondAttribute="leading" constant="20" id="G2S-SD-t4T"/>
                                     <constraint firstItem="UIG-ro-Mx3" firstAttribute="leading" secondItem="Hf6-FL-6Ue" secondAttribute="leading" constant="20" id="PJm-Gx-ctK"/>
                                     <constraint firstAttribute="trailing" secondItem="UIG-ro-Mx3" secondAttribute="trailing" constant="20" id="U2z-t1-o5w"/>
-                                    <constraint firstItem="uhr-oA-5ot" firstAttribute="top" secondItem="r1q-OO-xMY" secondAttribute="bottom" constant="80" id="WC1-K7-dJx"/>
+                                    <constraint firstItem="uhr-oA-5ot" firstAttribute="top" secondItem="r1q-OO-xMY" secondAttribute="bottom" constant="50" id="WC1-K7-dJx"/>
                                     <constraint firstItem="TZ7-rc-Hym" firstAttribute="top" secondItem="UIG-ro-Mx3" secondAttribute="bottom" constant="50" id="Xuo-cS-LuV"/>
                                     <constraint firstAttribute="trailing" secondItem="0JK-Y5-4Vf" secondAttribute="trailing" constant="20" id="fmv-fY-7kg"/>
                                     <constraint firstAttribute="trailing" secondItem="8Vq-Zi-AGG" secondAttribute="trailing" constant="20" id="kEA-7k-BPH"/>
                                     <constraint firstItem="uhr-oA-5ot" firstAttribute="leading" secondItem="Hf6-FL-6Ue" secondAttribute="leading" constant="20" id="nWt-UT-eju"/>
-                                    <constraint firstItem="r1q-OO-xMY" firstAttribute="top" secondItem="Hf6-FL-6Ue" secondAttribute="top" constant="100" id="oHT-ei-qUa"/>
+                                    <constraint firstItem="r1q-OO-xMY" firstAttribute="top" secondItem="Hf6-FL-6Ue" secondAttribute="top" constant="80" id="oHT-ei-qUa"/>
                                     <constraint firstItem="r1q-OO-xMY" firstAttribute="leading" secondItem="Hf6-FL-6Ue" secondAttribute="leading" constant="20" id="sqY-3T-BMK"/>
                                     <constraint firstItem="0JK-Y5-4Vf" firstAttribute="top" secondItem="TZ7-rc-Hym" secondAttribute="bottom" constant="10" id="x7L-qb-kbp"/>
                                 </constraints>

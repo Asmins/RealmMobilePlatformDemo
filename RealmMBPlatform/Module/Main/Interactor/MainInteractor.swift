@@ -62,7 +62,7 @@ extension MainInteractor: MainInteractorProtocol {
     
     func addNewTask(text:String) {
         
-        let timestamp = DateFormatter.localizedString(from: Date(), dateStyle: .none, timeStyle: .medium)
+        let timestamp = DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .medium)
         try! realm.write {
             let newMessage = Message()
             newMessage.textMessage = text
