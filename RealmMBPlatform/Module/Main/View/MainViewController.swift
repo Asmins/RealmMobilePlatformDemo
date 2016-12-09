@@ -25,8 +25,10 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //setuplongTap()
         self.setupTableView(tableView: tableView)
-        self.presenter?.syncData(userName: userName!, password: password!, tableView: tableView,id: idRoom!,indicator: activityIndicator,view:activityIndicatorView)
+        self.presenter?.setupViewController(viewController: self)
+        self.presenter?.syncData(userName: userName!, password: password!, tableView: tableView,id: idRoom!,indicator: activityIndicator,view:activityIndicatorView,navItem: navigationItem)
         self.presenter?.setupNavController(navigationController: navigationController!)
         self.presenter?.some(textField: textField)
         title = "Messages"
@@ -54,13 +56,43 @@ extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (self.presenter?.numberOfItem())!
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            //
+        }
+    }
 }
 
-extension MainViewController {
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension MainViewController:UIGestureRecognizerDelegate {
+    
     func setupTableView(tableView:UITableView) {
         tableView.register(UINib(nibName: "MessageCell", bundle: nil) , forCellReuseIdentifier: "MessageCell")
-        tableView.estimatedRowHeight = CGFloat(60)
+        tableView.estimatedRowHeight = CGFloat(80)
         tableView.rowHeight = UITableViewAutomaticDimension
     }
+    
+//    func setuplongTap() {
+//        let longPressGesture:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPress))
+//        longPressGesture.minimumPressDuration = 0.5
+//        longPressGesture.delegate = self
+//        self.tableView.addGestureRecognizer(longPressGesture)
+//    }
+//    
+//    func longPress(_ longPressGestureRecognizer: UILongPressGestureRecognizer) {
+//        
+//        if longPressGestureRecognizer.state == UIGestureRecognizerState.began {
+//            
+//            let touchPoint = longPressGestureRecognizer.location(in: self.view)
+//            print("Long")
+//            
+//        }
+//    }
 }
 

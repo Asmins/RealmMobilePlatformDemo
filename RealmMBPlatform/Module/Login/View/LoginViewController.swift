@@ -24,6 +24,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.presenter?.setupNavController(navController: navigationController!)
         self.setupUI()
+        textFieldForEmail.delegate = self
+        print(Server().url)
     }
   
     @IBAction func loginButton(_ sender: AnyObject) {
@@ -44,6 +46,11 @@ class LoginViewController: UIViewController {
     
 }
 
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.presenter?.validateEmail(email: textField.text!)
+    }
+}
 
 extension LoginViewController {
    

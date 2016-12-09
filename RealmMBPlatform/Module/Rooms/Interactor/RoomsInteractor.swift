@@ -21,7 +21,7 @@ class RoomsInteractor {
 
 extension RoomsInteractor: RoomsInteractorProtocol {
     func synchronizeData(userName: String, password: String, tableView: UITableView,activityIndicator:UIActivityIndicatorView,view:UIView) {
-        let url = URL(string: "http://10.0.4.193:9080")
+        let url = URL(string: Server().url)
         username = userName
         view.isHidden = false
         activityIndicator.startAnimating()
@@ -30,7 +30,7 @@ extension RoomsInteractor: RoomsInteractorProtocol {
                 let alert = SCLAlertView()
                 alert.showError("Error", subTitle: "User not found")
             }else{
-                let configuration = Realm.Configuration(syncConfiguration: (user!, URL(string: "realm://10.0.4.193:9080/all/rooms")!)
+                let configuration = Realm.Configuration(syncConfiguration: (user!, URL(string: "realm://\(Server().withOutHttp)/all/rooms")!)
                 )
                 self.realm = try! Realm(configuration: configuration)
               

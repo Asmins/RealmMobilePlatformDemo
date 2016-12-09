@@ -12,6 +12,7 @@ import RxCocoa
 import RxSwift
 
 class MainInteractor {
+    var deleteCheck = false
     var id = 0 
     var bool = false
     var username:String!
@@ -19,9 +20,27 @@ class MainInteractor {
     var messages = List<Message>()
     var realm:Realm!
     var notificationToken: NotificationToken!
+    var viewController:UIViewController?
     
     var disposeBag = DisposeBag()
     var textVariavble = Variable<String?>("")
+    
+    @objc func moreOption() {
+        let alert = UIAlertController(title: "Detail", message: "You can delete your room", preferredStyle: .actionSheet)
+        let deleteRoom = UIAlertAction(title: "Delete this room", style: .default, handler: { _ in
+            self.deleteCheck = true
+            try! self.realm.write {
+                self.realm.delete(self.rooms[self.id])
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+                    self.viewController?.navigationController?.popViewController(animated: true)
+                })
+            }
+        })
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(deleteRoom)
+        alert.addAction(cancel)
+        self.viewController?.present(alert, animated: true, completion: nil)
+    }
     
     func some(textField:UITextField){
         
@@ -60,6 +79,10 @@ class MainInteractor {
 
 extension MainInteractor: MainInteractorProtocol {
     
+    func setupView(viewController: UIViewController) {
+        self.viewController = viewController
+    }
+    
     func addNewTask(text:String) {
         
         let timestamp = DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .medium)
@@ -77,8 +100,8 @@ extension MainInteractor: MainInteractorProtocol {
         textField.text = ""
     }
     
-    func synchronizeData(userName: String, password: String,tableView:UITableView,id:Int,indicator:UIActivityIndicatorView,view:UIView) {
-        let url = URL(string: "http://10.0.4.193:9080")
+    func synchronizeData(userName: String, password: String,tableView:UITableView,id:Int,indicator:UIActivityIndicatorView,view:UIView,navItem: UINavigationItem) {
+        let url = URL(string: Server().url)
         username = userName
         view.isHidden = false
         indicator.startAnimating()
@@ -86,18 +109,25 @@ extension MainInteractor: MainInteractorProtocol {
             let user = user
           
             let configuration = Realm.Configuration(
-                syncConfiguration: (user!, URL(string: "realm://10.0.4.193:9080/all/rooms")!)
+                syncConfiguration: (user!, URL(string: "realm://\(Server().withOutHttp)/all/rooms")!)
             )
             
             self.realm = try! Realm(configuration: configuration)
             
             func updateList() {
-                self.rooms = Array(self.realm.objects(Rooms.self))
-                self.messages = self.rooms[id].message
-                self.id = id
-                view.isHidden = true
-                indicator.stopAnimating()
-                tableView.reloadData()
+                if self.deleteCheck == false {
+                    self.rooms = Array(self.realm.objects(Rooms.self))
+                    self.messages = self.rooms[id].message
+                    self.id = id
+                    view.isHidden = true
+                    indicator.stopAnimating()
+                    if self.rooms[id].admin == userName {
+                        navItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "settings"), style: .plain, target: self, action: #selector(self.moreOption))
+                    }
+                    tableView.reloadData()
+                }else{
+                    self.deleteCheck = false
+                }
             }
             updateList()
             self.notificationToken = self.realm.addNotificationBlock { _ in
@@ -105,5 +135,4 @@ extension MainInteractor: MainInteractorProtocol {
             }
         })
     }
-    
 }

@@ -30,8 +30,8 @@ extension MainPresenter: MainPresenterProtocol {
         self.interactor?.clean(textField: textField)
     }
     
-    func syncData(userName: String, password: String, tableView: UITableView,id:Int,indicator:UIActivityIndicatorView,view:UIView) {
-        self.interactor?.synchronizeData(userName: userName, password: password, tableView: tableView, id: id,indicator: indicator,view:view)
+    func syncData(userName: String, password: String, tableView: UITableView,id:Int,indicator:UIActivityIndicatorView,view:UIView,navItem:UINavigationItem) {
+        self.interactor?.synchronizeData(userName: userName, password: password, tableView: tableView, id: id,indicator: indicator,view:view,navItem: navItem)
     }
     
     func numberOfItem() -> Int {
@@ -39,12 +39,16 @@ extension MainPresenter: MainPresenterProtocol {
     }
     
     func setupCell(cell: MessageTableViewCell, indexPath: NSIndexPath,userName:String) {
-        cell.configCell(messageText: (self.interactor?.messages[indexPath.row].textMessage)!, author: (self.interactor?.messages[indexPath.row].user)!, currentUser: userName)
+        cell.configCell(messageText: (self.interactor?.messages[indexPath.row].textMessage)!, author: (self.interactor?.messages[indexPath.row].user)!, currentUser: userName ,date: (self.interactor?.messages[indexPath.row].date)!)
     }
     
     func setupNavController(navigationController:UINavigationController) {
         navigationController.navigationBar.tintColor = UIColor.white
         navigationController.navigationBar.backgroundColor = UIColor.black
         // navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(settingRoom))
+    }
+    
+    func setupViewController(viewController:UIViewController){
+        self.interactor?.setupView(viewController: viewController)
     }
 }

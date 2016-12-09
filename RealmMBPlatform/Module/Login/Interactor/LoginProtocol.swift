@@ -10,4 +10,5 @@ import UIKit
 
 protocol LoginInteractorProtocol {
     func checkText(userName:UITextField,password:UITextField,action:() -> ()) -> Bool
+    func validateEmail(email:String) -> Bool
 }

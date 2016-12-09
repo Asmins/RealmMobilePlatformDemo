@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import SCLAlertView
 
 class LoginInteractor {
     
@@ -22,5 +23,15 @@ extension LoginInteractor: LoginInteractorProtocol  {
             action()
             return false
         }
+    }
+    
+    func validateEmail(email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailText = NSPredicate(format:"SELF MATCHES %@",emailRegEx)
+        if emailText.evaluate(with: email) == false {
+            let alert = SCLAlertView()
+            alert.showError("Error", subTitle: "Invalid email")
+        }
+        return emailText.evaluate(with: email)
     }
 }

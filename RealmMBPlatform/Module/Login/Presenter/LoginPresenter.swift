@@ -23,4 +23,8 @@ extension LoginPresenter: LoginPresenterProtocol {
         navController.navigationBar.isTranslucent = true
         navController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white,NSFontAttributeName: UIFont(name: "Bradley Hand", size: 24)!]
     }
+    
+    func validateEmail(email: String) -> Bool {
+       return (self.interactor?.validateEmail(email: email))!
+    }
 }
